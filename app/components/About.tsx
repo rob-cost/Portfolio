@@ -13,8 +13,8 @@ const About = () => {
           <Image
             src="/user-image.png"
             alt="user"
-            width={50}
-            height={50}
+            width={500}
+            height={500}
             className="w-full rounded-3xl"
           />
         </div>

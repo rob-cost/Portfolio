@@ -8,8 +8,8 @@ const Header = () => {
         <Image
           src="/profile-img.png"
           alt=""
-          width={40}
-          height={50}
+          width={200}
+          height={200}
           className="rounded-full w-32"
         />
       </div>
