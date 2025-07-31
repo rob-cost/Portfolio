@@ -32,7 +32,9 @@ const About = () => {
                 <h3>{title}</h3>
                 <p>{description}</p> */}
           </ul>
-          <h4 className="my-6 text-gray-700 font-Ovo">Tools I used</h4>
+          <h4 className="my-6 text-gray-700 font-Ovo dark:text-white/80">
+            Tools I used
+          </h4>
           <ul className="flex items-center gap-3 sm:gap-5">
             {toolsData.map((tool, index) => (
               <li
