@@ -1,7 +1,13 @@
 import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 
-const Navbar = () => {
+const Navbar = ({
+  isDarkMode,
+  setIsDarkMode,
+}: {
+  isDarkMode: boolean;
+  setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
   const [isScroll, setIsScroll] = useState(false);
   const sideMenuRef = useRef<HTMLUListElement>(null);
 
@@ -25,7 +31,7 @@ const Navbar = () => {
   }, []);
   return (
     <>
-      <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
+      <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
         <Image
           src="/header-bg-color.png"
           alt="header"
@@ -36,12 +42,14 @@ const Navbar = () => {
       </div>
       <nav
         className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${
-          isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""
+          isScroll
+            ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20"
+            : ""
         }`}
       >
         <a href="#top">
           <Image
-            src="/logo.png"
+            src={isDarkMode ? "/logo_dark.png" : "/logo.png"}
             alt="Image logo"
             width={232}
             height={20}
@@ -51,7 +59,9 @@ const Navbar = () => {
 
         <ul
           className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
-            isScroll ? "" : " bg-white shadow-sm bg-opacity-50"
+            isScroll
+              ? ""
+              : " bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent"
           }`}
         >
           <li>
@@ -76,9 +86,9 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="flex items-center gap-4">
-          <button>
+          <button onClick={() => setIsDarkMode(prev => !prev)}>
             <Image
-              src="/moon_icon.png"
+              src={isDarkMode ? "/sun_icon.png" : "/moon_icon.png"}
               alt="moon-icon"
               width={50}
               height={50}
@@ -87,7 +97,7 @@ const Navbar = () => {
           </button>
           <button className="block md:hidden ml-3">
             <Image
-              src="/menu-black.png"
+              src={isDarkMode ? "/menu-white.png" : "/menu-black.png"}
               alt="menu"
               width={30}
               height={30}
@@ -102,11 +112,11 @@ const Navbar = () => {
         <ul
           ref={sideMenuRef}
           className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen
-         bg-slate-400 transition duration-500"
+         bg-slate-400 transition duration-500 dark:bg-darkHover dark:text-white"
         >
           <div className="absolute right-6 top-6">
             <Image
-              src="/close-black.png"
+              src={isDarkMode ? "/close-white.png" : "/close-black.png"}
               alt="close"
               width={20}
               height={20}
