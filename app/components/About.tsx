@@ -7,7 +7,7 @@ const About = () => {
   return (
     <motion.div
       id="about"
-      className="w-full px-[12%] py-10 scroll-mt-20"
+      className="w-full px-4 sm:px-8 lg:px-[12%] py-10 scroll-mt-20"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -50,12 +50,12 @@ const About = () => {
           />
         </motion.div>
         <motion.div
-          className="flex-1"
+          className="flex-1 w-full max-w-3xl"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <p className="mb-10 max-w-2xl font-Ovo">
+          <p className="mb-10 w-full max-w-3xl font-Ovo">
             I’m a curious and driven person with a strong passion for technology
             and digital creation. I recently completed my studies in web
             development, and I’m excited to grow in an industry that constantly

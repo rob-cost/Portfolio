@@ -149,16 +149,16 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/rob-cost/CF-ChatApp",
     liveDemoUrl: "https://github.com/rob-cost/CF-ChatApp",
   },
-  {
-    title: "Angular-RetroFlix",
-    image: "/works-img/retroflix-angular.png",
-    description:
-      "RetroFlix_Angular is a single-page Angular application built with TypeScript and Angular Material. It connects to a custom-built Movie API that provides data on classic retro films.",
-    techStack: ["Angular", "TypeScript", "Amgular-Material", "RxJS", "SCSS"],
-    githubUrl: "https://github.com/rob-cost/CF-RetroFlix_Client_Angular",
-    liveDemoUrl:
-      "https://rob-cost.github.io/CF-RetroFlix_Client_Angular/welcome",
-  },
+  // {
+  //   title: "Angular-RetroFlix",
+  //   image: "/works-img/retroflix-angular.png",
+  //   description:
+  //     "RetroFlix_Angular is a single-page Angular application built with TypeScript and Angular Material. It connects to a custom-built Movie API that provides data on classic retro films.",
+  //   techStack: ["Angular", "TypeScript", "Amgular-Material", "RxJS", "SCSS"],
+  //   githubUrl: "https://github.com/rob-cost/CF-RetroFlix_Client_Angular",
+  //   liveDemoUrl:
+  //     "https://rob-cost.github.io/CF-RetroFlix_Client_Angular/welcome",
+  // },
 ];
 
 export const serviceData = [

@@ -71,9 +71,9 @@ const Contact = () => {
       >
         <div className="grid grid-cols-2 gap-6 mt-10 mb-8">
           <motion.input
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
+            // initial={{ x: -50, opacity: 0 }}
+            // whileInView={{ x: 0, opacity: 1 }}
+            // transition={{ duration: 0.6, delay: 1.1 }}
             type="text"
             placeholder="Enter your name"
             required
@@ -81,9 +81,9 @@ const Contact = () => {
             className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
           ></motion.input>
           <motion.input
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
+            // initial={{ x: 50, opacity: 0 }}
+            // whileInView={{ x: 0, opacity: 1 }}
+            // transition={{ duration: 0.6, delay: 1.1 }}
             type="email"
             placeholder="Enter your email"
             required
@@ -92,9 +92,9 @@ const Contact = () => {
           ></motion.input>
         </div>
         <motion.textarea
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.3 }}
+          // initial={{ y: 100, opacity: 0 }}
+          // whileInView={{ y: 0, opacity: 1 }}
+          // transition={{ duration: 0.6, delay: 1.3 }}
           rows={6}
           placeholder="Enter your message..."
           required

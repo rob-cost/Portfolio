@@ -45,7 +45,7 @@ function Works() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.9 }}
-        className="grid md:grid-cols-3 gap-10"
+        className="grid md:grid-cols-2 gap-10"
       >
         {projects.map((project, index) => (
           <motion.div
@@ -54,18 +54,19 @@ function Works() {
             key={index}
             className="relative group overflow-hidden rounded-lg shadow-lg"
           >
-            <div className="h-[350px] w-[460px] relative overflow-hidden">
+            <div className="h-[200px] sm:h-[300px] md:h-[350px] w-full relative overflow-hidden">
               {/* Image */}
               <Image
                 src={project.image}
                 alt={project.title}
-                fill
+                height={400}
+                width={800}
                 className="object-cover transform group-hover:scale-105 transition duration-300"
               />
             </div>
 
             {/* Overlay on hover */}
-            <div className="absolute inset-0 bg-black bg-opacity-80 text-white p-6 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition duration-300">
+            <div className="absolute inset-0 bg-black bg-opacity-80 text-white p-6 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition duration-300 overflow-y-auto max-h-full">
               <div>
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                 <p className="text-sm mb-4">{project.description}</p>
