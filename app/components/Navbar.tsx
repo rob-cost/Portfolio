@@ -31,7 +31,7 @@ const Navbar = ({
   }, []);
   return (
     <>
-      <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
+      {/* <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
         <Image
           src="/header-bg-color.png"
           alt="header"
@@ -39,7 +39,7 @@ const Navbar = ({
           height={0}
           className="w-full"
         ></Image>
-      </div>
+      </div> */}
       <nav
         className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${
           isScroll
@@ -49,7 +49,8 @@ const Navbar = ({
       >
         <a href="#top">
           <Image
-            src={isDarkMode ? "/logo_dark.png" : "/logo.png"}
+            // src={isDarkMode ? "/logo_dark.png" : "/logo.png"}
+            src=""
             alt="Image logo"
             width={232}
             height={20}
@@ -76,7 +77,7 @@ const Navbar = ({
           </li>
           <li>
             <a href="#works" className="font-Ovo">
-              Works
+              My Work
             </a>
           </li>
           <li>

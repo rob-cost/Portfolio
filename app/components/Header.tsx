@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 const Header = () => {
   return (
     <div className="w-11/12 text-center max-w-3xl mx-auto h-screen flex flex-col items-center justify-center gap-4">
-      <motion.div
+      {/* <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
@@ -17,21 +17,21 @@ const Header = () => {
           height={200}
           className="rounded-full w-32"
         />
-      </motion.div>
+      </motion.div> */}
       <motion.h3
         initial={{ y: -16, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
         className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo"
       >
-        Hi! I am Roberto
-        <Image
+        Hi, I am Roberto
+        {/* <Image
           src="/hand-icon.png"
           alt="hand-icon"
           width={20}
           height={20}
           className="w-6"
-        />
+        /> */}
       </motion.h3>
       <motion.h1
         initial={{ y: -30, opacity: 0 }}
@@ -39,7 +39,7 @@ const Header = () => {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
       >
-        web developer in phase of learning
+        a curious mind with a passion for building and creating
       </motion.h1>
       <motion.p
         initial={{ opacity: 0 }}
@@ -47,7 +47,10 @@ const Header = () => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-2xl mx-auto font-Ovo"
       >
-        I am web developer who just finished his studies...
+        I love exploring new technologies, developing digital experiences, and
+        constantly challenging myself to grow. Whether I’m writing code or
+        making music, I’m always learning, evolving, and crafting something
+        meaningful.
       </motion.p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <motion.a

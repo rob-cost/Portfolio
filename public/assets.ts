@@ -35,8 +35,22 @@ import right_arrow from "./right-arrow.png";
 import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
+import react_icon from "./react_icon.png";
+import angular_icon from "./angular_icon.png";
+import javascript from "./javascript_icon.png";
+import typescript from "./typescript_icon.png";
+import tailwind from "./tailwind_icon.png";
+import html from "./html_icon.png";
+import aws from "./aws_icon.png";
 
 export const assets = {
+  html,
+  aws,
+  javascript,
+  tailwind,
+  typescript,
+  react_icon,
+  angular_icon,
   user_image,
   code_icon,
   code_icon_dark,
@@ -76,26 +90,74 @@ export const assets = {
   right_arrow_bold_dark,
 };
 
-export const workData = [
+type Project = {
+  title: string;
+  image: string;
+  description: string;
+  techStack: string[];
+  githubUrl: string;
+  liveDemoUrl: string;
+};
+
+export const projects: Project[] = [
   {
-    title: "Frontend project",
-    description: "Web Design",
-    bgImage: "/work-1.png",
+    title: "RetroFlix",
+    image: "/works-img/retroflix-mainpage.png",
+    description:
+      "Retroflix is a movie database web app connected to an API developed by me. Users can create accounts, browse movie info, and manage favorites. I focused on clean UI, responsive layout, and backend integration",
+    techStack: [
+      "React",
+      "JavaScript",
+      "Bootstrap",
+      "MongoDB",
+      "Node.js",
+      "Express.js",
+    ],
+    githubUrl: "https://github.com/rob-cost/CF-RetroFlix_Client",
+    liveDemoUrl: "https://retroflixvintage.netlify.app",
   },
   {
-    title: "Geo based app",
-    description: "Mobile App",
-    bgImage: "/work-2.png",
+    title: "Meet-App",
+    image: "/works-img/meetapp.png",
+    description:
+      "Meet App is a serverless, progressive web application (PWA) built with React that allows users to search for and discover upcoming events in cities around the world. The application leverages the Google Calendar API to fetch real-time event data and provides interactive data visualizations to help users analyze event trends and patterns. Built with a Test-Driven Development (TDD) approach, Meet App leverages AWS Lambda for serverless backend logic and Google OAuth2 for secure user authentication. ",
+    techStack: ["React", "Bootstrap", "AWS Lambda", "Google OAuth2"],
+    githubUrl: "https://github.com/rob-cost/CF-meet",
+    liveDemoUrl: "https://cf-meet-blue.vercel.app/",
   },
   {
-    title: "Photography site",
-    description: "Web Design",
-    bgImage: "/work-3.png",
+    title: "Pokedex",
+    image: "/works-img/pokedex.png",
+    description:
+      "The Pokedex App is a small app that allows you to look up information about a specific Pokémon. It fetches data directly from the Poke API and includes a searching feature.",
+    techStack: ["JavaScript", "HTML5", "Bootstrap", "CSS"],
+    githubUrl: "https://github.com/rob-cost/pokedex",
+    liveDemoUrl: "https://rob-cost.github.io/pokedex/",
   },
   {
-    title: "UI/UX designing",
-    description: "UI/UX Design",
-    bgImage: "/work-4.png",
+    title: "Chat-App",
+    image: "/works-img/chat-msg.png",
+    description:
+      "The Chat App is a cross-platform mobile application built using React Native and Expo. It allows users to chat in real-time room with additional multimedia functionality such as sharing images, taking photos, and sending location data. The app uses Firebase for authentication, cloud storage, and real-time database capabilities.",
+    techStack: [
+      "React Native",
+      "Expo",
+      "Firebase",
+      "Gifted Chat",
+      "Native Maps",
+    ],
+    githubUrl: "https://github.com/rob-cost/CF-ChatApp",
+    liveDemoUrl: "https://github.com/rob-cost/CF-ChatApp",
+  },
+  {
+    title: "Angular-RetroFlix",
+    image: "/works-img/retroflix-angular.png",
+    description:
+      "RetroFlix_Angular is a single-page Angular application built with TypeScript and Angular Material. It connects to a custom-built Movie API that provides data on classic retro films.",
+    techStack: ["Angular", "TypeScript", "Amgular-Material", "RxJS", "SCSS"],
+    githubUrl: "https://github.com/rob-cost/CF-RetroFlix_Client_Angular",
+    liveDemoUrl:
+      "https://rob-cost.github.io/CF-RetroFlix_Client_Angular/welcome",
   },
 ];
 
@@ -148,9 +210,44 @@ export const infoList = [
 ];
 
 export const toolsData = [
-  assets.vscode,
-  assets.firebase,
-  assets.mongodb,
-  assets.figma,
-  assets.git,
+  {
+    img: assets.react_icon,
+    name: "React",
+  },
+  {
+    img: assets.angular_icon,
+    name: "Angular",
+  },
+  {
+    img: assets.vscode,
+    name: "VSCode",
+  },
+  {
+    img: assets.javascript,
+    name: "JavaScript",
+  },
+  {
+    img: assets.html,
+    name: "HTML5",
+  },
+  {
+    img: assets.typescript,
+    name: "TypeScript",
+  },
+  {
+    img: assets.tailwind,
+    name: "Tailwind",
+  },
+  {
+    img: assets.firebase,
+    name: "Firebase",
+  },
+  {
+    img: assets.mongodb,
+    name: "MongoDB",
+  },
+  {
+    img: assets.aws,
+    name: "AWS",
+  },
 ];

@@ -42,7 +42,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <Image
-            src="/user-image.png"
+            src="/profile.jpg"
             alt="user"
             width={500}
             height={500}
@@ -56,10 +56,14 @@ const About = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <p className="mb-10 max-w-2xl font-Ovo">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ex
-            nesciunt porro! Odit eius obcaecati tenetur dolorem corporis
-            voluptates hic, libero culpa, amet corrupti vero pariatur delectus
-            impedit. Voluptate, voluptatibus?
+            I’m a curious and driven person with a strong passion for technology
+            and digital creation. I recently completed my studies in web
+            development, and I’m excited to grow in an industry that constantly
+            evolves and inspires me. I’m fascinated by how ideas come to life
+            through code, and I’m eager to keep learning, building, and taking
+            on new challenges. I bring a loyal mindset, strong work ethic, and a
+            creative spirit — especially through my love for music production,
+            which keeps me inspired both inside and outside of tech.
           </p>
 
           <ul>
@@ -85,11 +89,14 @@ const About = () => {
             {toolsData.map((tool, index) => (
               <motion.li
                 whileHover={{ scale: 1.1 }}
-                className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 
+                className="group relative flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 
                 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
                 key={index}
               >
-                <Image src={tool} alt="tool" className="w-5 sm:w-7" />
+                <Image src={tool.img} alt="tool" className="w-5 sm:w-7" />
+                <span className="absolute bottom-[-2rem] text-sm sm:text-sm text-gray-500 font-Ovo opacity-0 group-hover:opacity-100 transition-opacity duration-300  dark:text-white/80">
+                  {tool.name}
+                </span>
               </motion.li>
             ))}
           </motion.ul>

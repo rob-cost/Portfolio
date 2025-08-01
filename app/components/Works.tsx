@@ -1,62 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
-
-type Project = {
-  title: string;
-  image: string;
-  description: string;
-  techStack: string[];
-  githubUrl: string;
-};
-
-const projects: Project[] = [
-  {
-    title: "RetroFlix",
-    image: "/works-img/retroflix-mainpage.png",
-    description:
-      "Retroflix is a movie database web app connected to an API developed by me. Users can create accounts, browse movie info, and manage favorites. I focused on clean UI, responsive layout, and backend integration",
-    techStack: [
-      "React",
-      "JavaScript",
-      "Bootstrap",
-      "MongoDB",
-      "Node.js",
-      "Express.js",
-    ],
-    githubUrl: "https://github.com/rob-cost/CF-RetroFlix_Client",
-  },
-  {
-    title: "Meet-App",
-    image: "/works-img/meetapp.png",
-    description:
-      "Meet App is a serverless, progressive web application (PWA) built with React that allows users to search for and discover upcoming events in cities around the world. The application leverages the Google Calendar API to fetch real-time event data and provides interactive data visualizations to help users analyze event trends and patterns. Built with a Test-Driven Development (TDD) approach, Meet App leverages AWS Lambda for serverless backend logic and Google OAuth2 for secure user authentication. ",
-    techStack: ["React", "Bootstrap", "AWS Lambda", "Google OAuth2"],
-    githubUrl: "https://github.com/rob-cost/CF-meet",
-  },
-  {
-    title: "Pokedex",
-    image: "/works-img/pokedex.png",
-    description:
-      "The Pokedex App is a small app that allows you to look up information about a specific Pokémon. It fetches data directly from the Poke API and includes a searching feature.",
-    techStack: ["JavaScript", "HTML5", "Bootstrap", "CSS"],
-    githubUrl: "https://github.com/rob-cost/pokedex",
-  },
-  {
-    title: "Chat-App",
-    image: "/works-img/chat-msg.png",
-    description:
-      "The Chat App is a cross-platform mobile application built using React Native and Expo. It allows users to chat in real-time room with additional multimedia functionality such as sharing images, taking photos, and sending location data. The app uses Firebase for authentication, cloud storage, and real-time database capabilities.",
-    techStack: [
-      "React Native",
-      "Expo",
-      "Firebase",
-      "Gifted Chat",
-      "Native Maps",
-    ],
-    githubUrl: "https://github.com/rob-cost/CF-ChatApp",
-  },
-];
+import { projects } from "@/public/assets";
 
 function Works() {
   return (
@@ -73,7 +18,7 @@ function Works() {
         transition={{ duration: 0.5, delay: 0.3 }}
         className="text-center mb-2 text-lg font-Ovo"
       >
-        My Portfolio
+        Portfolio
       </motion.h4>
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
@@ -89,16 +34,18 @@ function Works() {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
-        debitis magni commodi sint autem odit voluptates ad id, totam nisi modi,
-        placeat reiciendis? Nulla qui eligendi odio saepe nesciunt
-        necessitatibus.
+        I’m always working on new projects and experimenting with ideas. Here
+        are some of my latest works — you can find more on my{" "}
+        <a href="https://github.com/rob-cost" target="_blank">
+          GitHub
+        </a>{" "}
+        profile.
       </motion.p>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.9 }}
-        className="grid md:grid-cols-2 gap-10"
+        className="grid md:grid-cols-3 gap-10"
       >
         {projects.map((project, index) => (
           <motion.div
@@ -107,21 +54,22 @@ function Works() {
             key={index}
             className="relative group overflow-hidden rounded-lg shadow-lg"
           >
-            <div className="h-[410px] w-full relative overflow-hidden">
+            <div className="h-[350px] w-[460px] relative overflow-hidden">
               {/* Image */}
               <Image
                 src={project.image}
                 alt={project.title}
-                width={800}
-                height={500}
+                fill
                 className="object-cover transform group-hover:scale-105 transition duration-300"
               />
             </div>
 
             {/* Overlay on hover */}
-            <div className="absolute inset-0 bg-black bg-opacity-80 text-white p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-sm mb-4">{project.description}</p>
+            <div className="absolute inset-0 bg-black bg-opacity-80 text-white p-6 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition duration-300">
+              <div>
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <p className="text-sm mb-4">{project.description}</p>
+              </div>
 
               <div className="mb-4">
                 <h4 className="text-sm font-bold mb-1 uppercase text-gray-300">
@@ -135,19 +83,46 @@ function Works() {
                   ))}
                 </ul>
               </div>
-
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto flex items-center gap-2 text-sm underline hover:text-gray-300"
-              >
-                View on GitHub
-              </a>
+              <div className="flex items-center gap-10">
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm underline hover:text-gray-300"
+                >
+                  View on GitHub
+                </a>
+                <a
+                  href={project.liveDemoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm underline hover:text-gray-300"
+                >
+                  Live demo
+                </a>
+              </div>
             </div>
           </motion.div>
         ))}
       </motion.div>
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+        <motion.a
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1 }}
+          href="https://github.com/rob-cost"
+          className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent"
+        >
+          GitHub profile
+          <Image
+            src="/right-arrow-white.png"
+            alt="hand-icon"
+            width={20}
+            height={20}
+            className="w-4"
+          />
+        </motion.a>
+      </div>
     </motion.div>
   );
 }
