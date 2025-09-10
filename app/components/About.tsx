@@ -55,7 +55,7 @@ const About = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <p className="mb-10 w-full max-w-3xl font-Ovo">
+          <p className="mb-10 w-full max-w-3xl leading-6 font-Ovo">
             I’m a curious and driven person with a strong passion for technology
             and digital creation. I recently completed my studies in web
             development, and I’m excited to grow in an industry that constantly

@@ -37,7 +37,7 @@ const Header = () => {
         initial={{ y: -30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
+        className="text-3xl sm:text-6xl lg:text-[66px] leading-normal font-Ovo"
       >
         a curious mind with a passion for building and creating
       </motion.h1>
@@ -45,7 +45,7 @@ const Header = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.7 }}
-        className="mb-10 w-full max-w-2xl font-Ovo"
+        className="mb-10 w-full max-w-2xl leading-6 font-Ovo"
       >
         I love exploring new technologies, developing digital experiences, and
         constantly challenging myself to grow. Whether I’m writing code or
@@ -73,7 +73,7 @@ const Header = () => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          href=""
+          href="/my-resume.pdf"
           download
           className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black"
         >

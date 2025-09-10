@@ -48,14 +48,14 @@ const Navbar = ({
         }`}
       >
         <a href="#top">
-          <Image
+          {/* <Image
             // src={isDarkMode ? "/logo_dark.png" : "/logo.png"}
             src=""
             alt="Image logo"
             width={232}
             height={20}
             className="w-28 cursor-pointer"
-          ></Image>
+          ></Image> */}
         </a>
 
         <ul
@@ -113,11 +113,11 @@ const Navbar = ({
         <ul
           ref={sideMenuRef}
           className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen
-         bg-slate-400 transition duration-500 dark:bg-darkHover dark:text-white"
+         bg-zinc-900 text-cyan-50  transition duration-500 dark:bg-gray-50 dark:text-black"
         >
           <div className="absolute right-6 top-6">
             <Image
-              src={isDarkMode ? "/close-white.png" : "/close-black.png"}
+              src={isDarkMode ? "/close-black.png" : "/close-white.png"}
               alt="close"
               width={20}
               height={20}

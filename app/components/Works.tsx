@@ -32,7 +32,7 @@ function Works() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.7 }}
-        className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
+        className="text-center max-w-2xl leading-6 mx-auto mt-5 mb-12 font-Ovo"
       >
         I’m always working on new projects and experimenting with ideas. Here
         are some of my latest works — you can find more on my{" "}
@@ -40,6 +40,17 @@ function Works() {
           GitHub
         </a>{" "}
         profile.
+      </motion.p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+        className="text-xs text-gray-400 italic mt-3 mb-5 text-center font-Ovo"
+      >
+        <span className="hidden sm:inline">
+          (Hover on image to see details)
+        </span>
+        <span className="sm:hidden">(Tap image to see details)</span>
       </motion.p>
       <motion.div
         initial={{ opacity: 0 }}
