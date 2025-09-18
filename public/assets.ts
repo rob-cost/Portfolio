@@ -126,15 +126,6 @@ export const projects: Project[] = [
     liveDemoUrl: "https://cf-meet-blue.vercel.app/",
   },
   {
-    title: "Pokedex",
-    image: "/works-img/pokedex.png",
-    description:
-      "The Pokedex App is a small app that allows you to look up information about a specific Pokémon. It fetches data directly from the Poke API and includes a searching feature.",
-    techStack: ["JavaScript", "HTML5", "Bootstrap", "CSS"],
-    githubUrl: "https://github.com/rob-cost/pokedex",
-    liveDemoUrl: "https://rob-cost.github.io/pokedex/",
-  },
-  {
     title: "Chat-App",
     image: "/works-img/chat-msg.png",
     description:
