@@ -242,3 +242,46 @@ export const toolsData = [
     name: "AWS",
   },
 ];
+
+export const toolsBadges = [
+  {
+    name: "Python",
+    className:
+      "inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-sm font-medium text-gray-600 inset-ring inset-ring-gray-500/10 dark:bg-gray-400/10 dark:text-gray-400 dark:inset-ring-gray-400/20",
+  },
+  {
+    name: "Django",
+    className:
+      "inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-sm font-medium text-red-700 inset-ring inset-ring-red-600/10 dark:bg-red-400/10 dark:text-red-400 dark:inset-ring-red-400/20",
+  },
+  {
+    name: "AWS",
+    className:
+      "inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-sm font-medium text-yellow-800 inset-ring inset-ring-yellow-600/20 dark:bg-yellow-400/10 dark:text-yellow-500 inset-ring-yellow-400/20",
+  },
+  {
+    name: "NodeJS",
+    className:
+      "inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-sm font-medium text-purple-700 inset-ring inset-ring-purple-700/10 dark:bg-green-400/10 dark:text-green-400 inset-ring-green-500/20",
+  },
+  {
+    name: "React",
+    className:
+      "inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-sm font-medium text-green-700 inset-ring inset-ring-green-600/20 dark:bg-blue-400/10 dark:text-blue-400 inset-ring-blue-400/30",
+  },
+  {
+    name: "JavaScript",
+    className:
+      "inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-sm font-medium text-blue-700 inset-ring inset-ring-blue-700/10 dark:bg-indigo-400/10 dark:text-indigo-400 inset-ring-indigo-400/30",
+  },
+  {
+    name: "NextJS",
+    className:
+      "inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-sm font-medium text-indigo-700 inset-ring inset-ring-indigo-700/10 dark:bg-purple-400/10 dark:text-purple-400 inset-ring-purple-400/30",
+  },
+  {
+    name: "TypeScript",
+    className:
+      "inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-sm font-medium text-pink-700 inset-ring inset-ring-pink-700/10 dark:bg-pink-400/10 dark:text-pink-400 inset-ring-pink-400/20",
+  },
+];

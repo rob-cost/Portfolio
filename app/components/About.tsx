@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { toolsData } from "@/public/assets";
+import { toolsBadges } from "@/public/assets";
 import { motion } from "motion/react";
 
 const About = () => {
@@ -78,7 +78,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.3 }}
           >
-            Tools I used
+            Skills:
           </motion.h4>
           <motion.ul
             className="flex items-center gap-3 sm:gap-5"
@@ -86,7 +86,7 @@ const About = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 1 }}
           >
-            {toolsData.map((tool, index) => (
+            {/* {toolsData.map((tool, index) => (
               <motion.li
                 whileHover={{ scale: 1.1 }}
                 className="group relative flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 
@@ -97,6 +97,11 @@ const About = () => {
                 <span className="absolute bottom-[-2rem] text-sm sm:text-sm text-gray-500 font-Ovo opacity-0 group-hover:opacity-100 transition-opacity duration-300  dark:text-white/80">
                   {tool.name}
                 </span>
+              </motion.li>
+            ))} */}
+            {toolsBadges.map((tool, index) => (
+              <motion.li key={index}>
+                <span className={tool.className}>{tool.name}</span>
               </motion.li>
             ))}
           </motion.ul>
