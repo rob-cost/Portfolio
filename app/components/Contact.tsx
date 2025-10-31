@@ -39,7 +39,7 @@ const Contact = () => {
       <motion.h4
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
         className="text-center mb-2 text-lg font-Ovo"
       >
         Connect
@@ -47,7 +47,7 @@ const Contact = () => {
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
         className="text-center text-5xl font-Ovo"
       >
         Get in touch
@@ -55,17 +55,17 @@ const Contact = () => {
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
-        If you have any questions, comments, or feeedback, please use the fomr
+        If you have any questions, comments, or feedback, please use the form
         below.
       </motion.p>
 
       <motion.form
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.9 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
         className="max-w-2xl mx-auto"
         onSubmit={onSubmit}
       >

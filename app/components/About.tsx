@@ -16,7 +16,7 @@ const About = () => {
         className="text-center mb-2 text-lg font-Ovo"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
       >
         Introduction
       </motion.h4>
@@ -24,7 +24,7 @@ const About = () => {
         className="text-center text-5xl font-Ovo"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
       >
         About me
       </motion.h2>
@@ -53,7 +53,7 @@ const About = () => {
           className="flex-1 w-full max-w-3xl"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
         >
           <p className="mb-10 w-full max-w-3xl leading-6 font-Ovo">
             I’m a curious and driven person with a strong passion for technology
@@ -62,7 +62,7 @@ const About = () => {
             evolves and inspires me. I’m fascinated by how ideas come to life
             through code, and I’m eager to keep learning, building, and taking
             on new challenges. I bring a loyal mindset, strong work ethic, and a
-            creative spirit — especially through my love for music production,
+            creative spirit, especially through my love for music production,
             which keeps me inspired both inside and outside of tech.
           </p>
 
@@ -76,7 +76,7 @@ const About = () => {
             className="my-6 text-gray-700 font-Ovo dark:text-white/80"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
+            transition={{ duration: 0.5, delay: 1 }}
           >
             Skills:
           </motion.h4>
@@ -84,7 +84,7 @@ const About = () => {
             className="flex items-center gap-3 sm:gap-5"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
           >
             {/* {toolsData.map((tool, index) => (
               <motion.li
