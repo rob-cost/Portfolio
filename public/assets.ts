@@ -97,6 +97,7 @@ type Project = {
   techStack: string[];
   githubUrl: string;
   liveDemoUrl: string;
+  slug: string;
 };
 
 export const projects: Project[] = [
@@ -105,17 +106,10 @@ export const projects: Project[] = [
     image: "/works-img/ailearningplatform.png",
     description:
       "An intelligent, adaptive learning platform that generates personalized educational content using Large Language Models (LLMs)",
-    techStack: [
-      "Django",
-      "Python",
-      "Groq",
-      "PostgreSQL",
-      "Pydantic",
-      "GCP",
-      "Github Actions",
-    ],
+    techStack: ["Django", "Python", "Groq", "PostgreSQL", "Pydantic"],
     githubUrl: "https://github.com/rob-cost/Learning-Platform",
     liveDemoUrl: "https://ailmspro.roberto-costantino.com/",
+    slug: "ailmspro",
   },
   {
     title: "Recipe Discovery App",
@@ -132,6 +126,7 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/rob-cost/recipe-app",
     liveDemoUrl: "https://recipes-discover-app-7480a557fb61.herokuapp.com/",
+    slug: "ailmspro",
   },
   {
     title: "RetroFlix",
@@ -148,15 +143,17 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/rob-cost/CF-RetroFlix_Client",
     liveDemoUrl: "https://retroflixvintage.netlify.app",
+    slug: "ailmspro",
   },
   {
     title: "Meet-App",
     image: "/works-img/meetapp.png",
     description:
-      "Meet App is a serverless, progressive web application (PWA) built with React that allows users to search for and discover upcoming events in cities around the world. The application leverages the Google Calendar API to fetch real-time event data and provides interactive data visualizations to help users analyze event trends and patterns. Built with a Test-Driven Development (TDD) approach, Meet App leverages AWS Lambda for serverless backend logic and Google OAuth2 for secure user authentication. ",
+      "Meet App is a serverless, progressive web application (PWA) built with React that allows users to search for and discover upcoming events in cities around the world.",
     techStack: ["React", "Bootstrap", "AWS Lambda", "Google OAuth2"],
     githubUrl: "https://github.com/rob-cost/CF-meet",
     liveDemoUrl: "https://cf-meet-blue.vercel.app/",
+    slug: "ailmspro",
   },
   // {
   //   title: "Chat-App",

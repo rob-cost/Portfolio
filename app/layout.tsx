@@ -25,7 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth ">
       <head>
-        <meta name="description" content="Welcome to Roberto Costantino's World" />
+        <meta
+          name="description"
+          content="Welcome to Roberto Costantino's World"
+        />
       </head>
       <body
         className={`${ovo.className} ${outfit.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}
