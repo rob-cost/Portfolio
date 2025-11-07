@@ -112,6 +112,23 @@ export const projects: Project[] = [
     slug: "ailmspro",
   },
   {
+    title: "RetroFlix",
+    image: "/retroflix_1.png",
+    description:
+      "Retroflix is a full-stack movie app built with MERN stack that allows users to browse and manage movies with a responsive layout and backend integration",
+    techStack: [
+      "React",
+      "JavaScript",
+      "Bootstrap",
+      "MongoDB",
+      "Node.js",
+      "Express.js",
+    ],
+    githubUrl: "https://github.com/rob-cost/CF-RetroFlix_Client",
+    liveDemoUrl: "https://retroflixvintage.netlify.app",
+    slug: "retroflix",
+  },
+  {
     title: "Recipe Discovery App",
     image: "/works-img/recipes-app.png",
     description:
@@ -126,23 +143,6 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/rob-cost/recipe-app",
     liveDemoUrl: "https://recipes-discover-app-7480a557fb61.herokuapp.com/",
-    slug: "ailmspro",
-  },
-  {
-    title: "RetroFlix",
-    image: "/works-img/retroflix-mainpage.png",
-    description:
-      "Retroflix is a movie database web app connected to an API developed by me. Users can create accounts, browse movie info, and manage favorites. I focused on clean UI, responsive layout, and backend integration",
-    techStack: [
-      "React",
-      "JavaScript",
-      "Bootstrap",
-      "MongoDB",
-      "Node.js",
-      "Express.js",
-    ],
-    githubUrl: "https://github.com/rob-cost/CF-RetroFlix_Client",
-    liveDemoUrl: "https://retroflixvintage.netlify.app",
     slug: "ailmspro",
   },
   {
