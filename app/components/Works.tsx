@@ -47,7 +47,7 @@ function Works() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.9 }}
-        className="grid md:grid-cols-2 gap-10"
+        className="grid md:grid-cols-2 gap-10 justify-items-center"
       >
         {projects.map((project, index) => (
           <motion.div
@@ -94,29 +94,6 @@ function Works() {
                   ))}
                 </ul>
               </div>
-              {/* Links
-              <div className="flex items-center gap-6 mt-4">
-                {project.githubUrl && (
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm underline hover:text-gray-300"
-                  >
-                    GitHub
-                  </a>
-                )}
-                {project.liveDemoUrl && (
-                  <a
-                    href={project.liveDemoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm underline hover:text-gray-300"
-                  >
-                    Live Demo
-                  </a>
-                )}
-              </div> */}
             </div>
           </motion.div>
         ))}
