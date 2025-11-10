@@ -55,15 +55,30 @@ const About = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <p className="mb-10 w-full max-w-3xl leading-6 font-Ovo">
-            I’m a curious and driven person with a strong passion for technology
+          <p className="mb-10 w-full max-w-3xl leading-8 font-Ovo">
+            {/* I’m a curious and driven person with a strong passion for technology
             and digital creation. I recently completed my studies in web
             development, and I’m excited to grow in an industry that constantly
             evolves and inspires me. I’m fascinated by how ideas come to life
             through code, and I’m eager to keep learning, building, and taking
             on new challenges. I bring a loyal mindset, strong work ethic, and a
             creative spirit, especially through my love for music production,
-            which keeps me inspired both inside and outside of tech.
+            which keeps me inspired both inside and outside of tech. */}
+            I’m a curious and driven person with a strong passion for
+            technology. Through my past work experiences, I’ve developed solid
+            <strong> teamwork </strong> and <strong>leadership </strong> skills,
+            <strong> managing </strong> teams, handling daily operations, and
+            working well under pressure and tight deadlines. My philosophy has
+            always been to create a respectful and productive environment where
+            everyone can perform at their best.
+            <br /> I recently completed my studies in web development and I’m
+            eager to keep learning and growing in this exciting field, where
+            every team member can contribute to building something meaningful. I
+            bring a strong
+            <strong> work ethic </strong>, a <strong>creative spirit</strong>,
+            and a <strong>loyal mindset</strong> to every project I’m part of.
+            I’m also a big fan of electronic music, a hobby that keeps me
+            inspired both inside and outside of tech.
           </p>
 
           <ul>

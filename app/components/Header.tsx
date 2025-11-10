@@ -39,7 +39,7 @@ const Header = () => {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="text-3xl sm:text-6xl lg:text-[66px] leading-normal font-Ovo"
       >
-        a curious mind with a passion for building and creating
+        a Web Developer with a curios mind
       </motion.h1>
       <motion.p
         initial={{ opacity: 0 }}
@@ -47,10 +47,9 @@ const Header = () => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="mb-10 w-full max-w-2xl leading-6 font-Ovo"
       >
-        I love exploring new technologies, developing digital experiences, and
-        constantly challenging myself to grow. Whether I’m writing code or
-        making music, I’m always learning, evolving, and crafting something
-        meaningful.
+        I love exploring new technologies and constantly challenging myself to
+        grow. Whether I’m writing code or making music, I’m always learning,
+        evolving, and crafting something meaningful.
       </motion.p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <motion.a
