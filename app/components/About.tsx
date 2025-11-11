@@ -71,10 +71,10 @@ const About = () => {
             working well under pressure and tight deadlines. My philosophy has
             always been to create a respectful and productive environment where
             everyone can perform at their best.
-            <br /> I recently completed my studies in web development and I’m
-            eager to keep learning and growing in this exciting field, where
-            every team member can contribute to building something meaningful. I
-            bring a strong
+            <br /> I am a web developer with certification in modern
+            technologies and I’m eager to keep learning and growing in this
+            exciting field, where every team member can contribute to building
+            something meaningful. I bring a strong
             <strong> work ethic </strong>, a <strong>creative spirit</strong>,
             and a <strong>loyal mindset</strong> to every project I’m part of.
             I’m also a big fan of electronic music, a hobby that keeps me
