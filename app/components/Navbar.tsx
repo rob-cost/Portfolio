@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = ({
   isDarkMode,
@@ -66,24 +67,24 @@ const Navbar = ({
           }`}
         >
           <li>
-            <a href="#top" className="font-Ovo">
+            <Link href="/#top" className="font-Ovo">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#about" className="font-Ovo">
+            <Link href="/#about" className="font-Ovo">
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#works" className="font-Ovo">
+            <Link href="/#works" className="font-Ovo">
               My Work
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#contact" className="font-Ovo">
+            <Link href="/#contact" className="font-Ovo">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
         <div className="flex items-center gap-4">
@@ -126,24 +127,24 @@ const Navbar = ({
             />
           </div>
           <li>
-            <a href="#top" className="font-Ovo" onClick={closeMenu}>
+            <Link href="/#top" className="font-Ovo" onClick={closeMenu}>
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#about" className="font-Ovo" onClick={closeMenu}>
+            <Link href="/#about" className="font-Ovo" onClick={closeMenu}>
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#works" className="font-Ovo" onClick={closeMenu}>
+            <Link href="/#works" className="font-Ovo" onClick={closeMenu}>
               Works
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#contact" className="font-Ovo" onClick={closeMenu}>
+            <Link href="/#contact" className="font-Ovo" onClick={closeMenu}>
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

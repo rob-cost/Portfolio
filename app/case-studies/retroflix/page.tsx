@@ -10,7 +10,7 @@ export default function RetroFlixCaseStudy() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="w-full px-[12%] py-10 mx-auto space-y-16"
+      className="w-full px-[12%] py-10 mx-auto space-y-16 pt-36"
     >
       {/* Header */}
       <div className="text-center space-y-4">
@@ -23,7 +23,7 @@ export default function RetroFlixCaseStudy() {
       </div>
 
       {/* Section 1: The Overview */}
-      <div className="flex flex-col md:flex-row md:items-center gap-8">
+      <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">The Overview</h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
@@ -39,20 +39,18 @@ export default function RetroFlixCaseStudy() {
           </p>
         </div>
 
-        <div className="md:w-1/2 flex justify-center">
-          <div className="relative h-72 md:h-96 w-full max-w-xl rounded-lg overflow-hidden">
-            <Image
-              src="/retroflix_1.png"
-              alt="RetroFlix Overview"
-              className="object-contain object-center rounded-lg mx-auto"
-              fill
-            />
-          </div>
+        <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
+          <Image
+            src="/retroflix_1.png"
+            alt="RetroFlix Overview"
+            className="object-contain object-center rounded-lg mx-auto"
+            fill
+          />
         </div>
       </div>
 
       {/* Section 2: The Approach */}
-      <div className="flex flex-col md:flex-row md:items-center gap-8">
+      <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
         <div className="md:w-1/2 flex flex-col gap-4 justify-center items-center">
           {["/retroflix_2.png", "/retroflix_3.png"].map((src, i) => (
             <div key={i} className="relative flex-1 h-60 overflow-hidden">
@@ -88,7 +86,7 @@ export default function RetroFlixCaseStudy() {
       </div>
 
       {/* Section 3: The Challenges */}
-      <div className="flex flex-col md:flex-row md:items-center gap-8">
+      <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">
             The Challenges
@@ -102,29 +100,25 @@ export default function RetroFlixCaseStudy() {
           </p>
         </div>
 
-        <div className="md:w-1/2 flex justify-center">
-          <div className="relative h-72 md:h-96 w-full max-w-xl rounded-lg overflow-hidden">
-            <Image
-              src="/retroflix_challenges.png"
-              alt="RetroFlix Challenges"
-              className="object-contain object-center rounded-lg mx-auto"
-              fill
-            />
-          </div>
+        <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
+          <Image
+            src="/retroflix_challenges.png"
+            alt="RetroFlix Challenges"
+            className="object-contain object-center rounded-lg mx-auto"
+            fill
+          />
         </div>
       </div>
 
       {/* Section 4: The Outcome */}
-      <div className="flex flex-col md:flex-row md:items-center gap-8">
-        <div className="md:w-1/2 flex justify-center">
-          <div className="relative h-72 md:h-96 w-full max-w-xl rounded-lg overflow-hidden">
-            <Image
-              src="/retroflix_outcome.png"
-              alt="RetroFlix Outcome"
-              className="object-contain object-center rounded-lg mx-auto"
-              fill
-            />
-          </div>
+      <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
+        <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
+          <Image
+            src="/retroflix_outcome.png"
+            alt="RetroFlix Outcome"
+            className="object-contain object-center rounded-lg mx-auto"
+            fill
+          />
         </div>
 
         <div className="md:w-1/2">
@@ -159,7 +153,7 @@ export default function RetroFlixCaseStudy() {
       </div>
 
       {/* Section 5: Future Steps */}
-      <div className="flex flex-col md:flex-row md:items-center gap-8">
+      <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">Future Steps</h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
@@ -177,15 +171,13 @@ export default function RetroFlixCaseStudy() {
           </ul>
         </div>
 
-        <div className="md:w-1/2 flex justify-center">
-          <div className="relative h-72 md:h-96 w-full max-w-xl rounded-lg overflow-hidden">
-            <Image
-              src="/background-retroflix.png"
-              alt="RetroFlix Future Steps"
-              className="object-contain object-center rounded-lg mx-auto"
-              fill
-            />
-          </div>
+        <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
+          <Image
+            src="/background-retroflix.png"
+            alt="RetroFlix Future Steps"
+            className="object-contain object-center rounded-lg mx-auto"
+            fill
+          />
         </div>
       </div>
 

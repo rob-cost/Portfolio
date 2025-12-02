@@ -113,7 +113,7 @@ export const projects: Project[] = [
   },
   {
     title: "RetroFlix",
-    image: "/retroflix_1.png",
+    image: "/background-retroflix.png",
     description:
       "Retroflix is a full-stack movie app built with MERN stack that allows users to browse and manage movies with a responsive layout and backend integration",
     techStack: [

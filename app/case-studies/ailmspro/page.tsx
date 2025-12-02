@@ -10,7 +10,7 @@ export default function AilmsProCaseStudy() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="w-full px-[12%] py-10 mx-auto space-y-16"
+      className="w-full px-[12%] py-10 mx-auto space-y-16 pt-36"
     >
       {/* Header */}
       <div className="text-center space-y-4">
@@ -22,7 +22,7 @@ export default function AilmsProCaseStudy() {
       </div>
 
       {/* Section 1: The Overview */}
-      <div className="flex flex-col md:flex-row md:items-center gap-8">
+      <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">The Overview</h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
@@ -46,8 +46,7 @@ export default function AilmsProCaseStudy() {
       </div>
 
       {/* Section 2: The Approach */}
-      <div className="flex flex-col md:flex-row gap-8">
-        {/* Images */}
+      <div className="flex flex-col md:flex-row pt-20 gap-8">
         <div className="md:w-1/2 flex flex-col gap-4">
           {["/ailmspro_3.png", "/ailmspro_4.png"].map((src, i) => (
             <div
@@ -95,7 +94,7 @@ export default function AilmsProCaseStudy() {
       </div>
 
       {/* Section 3: The Challenges */}
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex flex-col md:flex-row pt-20 gap-8">
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">
             The Challenges
@@ -128,7 +127,7 @@ export default function AilmsProCaseStudy() {
       </div>
 
       {/* Section 4: The Outcome */}
-      <div className="flex flex-col md:flex-row md:items-center gap-8">
+      <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
         <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
           <Image
             src="/ailmspro_7.png"
@@ -170,7 +169,7 @@ export default function AilmsProCaseStudy() {
       </div>
 
       {/* Section 5: Future Steps */}
-      <div className="flex flex-col md:flex-row md:items-center gap-8">
+      <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">Future Steps</h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
