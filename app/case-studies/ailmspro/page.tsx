@@ -21,6 +21,25 @@ export default function AilmsProCaseStudy() {
         </p>
       </div>
 
+      {/* Section 0: Specs */}
+      <div>
+        <div className="text-center">
+          <p>
+            <strong>Role:</strong> Fullstack Developer
+          </p>
+          <p>
+            <strong>Duration:</strong> 5 months
+          </p>
+          <p>
+            <strong>Credits:</strong> Renish Bhaskaran (Backend Developer)
+          </p>
+          <p>
+            <strong>Tech-Stack:</strong> Python, Django, Celery, Redis, GCP,
+            GitActions
+          </p>
+        </div>
+      </div>
+
       {/* Section 1: The Overview */}
       <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
         <div className="md:w-1/2">
