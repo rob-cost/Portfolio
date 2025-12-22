@@ -45,12 +45,12 @@ export default function AilmsProCaseStudy() {
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">The Overview</h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            I wanted to build and deploy a fully functional educational platform
-            powered by AI. Users should be able to choose a subject and receive
-            a learning path divided into difficulty, topics, and lessons. At the
-            same time, I wanted to improve my skills in <strong>Python</strong>,{" "}
-            <strong>Django</strong>, <strong>GCP</strong> and explore new
-            technologies.
+            The goal of this project was to design and deploy a fully functional
+            AI educational platform. Users select a subject, complete an initial
+            evaluation test, and receive a learning path structured by
+            difficulty, topics, and lessons, with progress tracking.
+            <br />I used Django as full-stack framework due to its database
+            integration and built-in authentication system.
           </p>
         </div>
         <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
@@ -87,27 +87,24 @@ export default function AilmsProCaseStudy() {
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">The Approach</h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            To build the platform, I started by designing and implementing the
-            database models, ensuring they could support the features I had
-            planned. I then carefully researched and selected a Large Language
-            Model (LLM) that I could use given a limited budget. I integrated
-            the LLM to produce:
-          </p>
-          <ul className="list-disc ml-5 text-gray-500 mb-4 dark:text-gray-300">
-            <li>Difficulty assessment</li>
-            <li>Lessons</li>
-            <li>Topics</li>
-          </ul>
-          <p className="text-gray-500 mb-4 dark:text-gray-300">
-            I have then continuously refined the generated content to improve
-            its accuracy. Once the backend logic was in place, I created a basic
-            UI and focused on designing a smooth user experience, implementing
-            login and signup forms as well as navigation between different
-            pages. To enhance performance and responsiveness, I implemented
-            asynchronous processing using Celery, allowing content generation
-            and other tasks to run in the background without slowing down the
-            user interface. Finally, I continuously refined the UI to make it
-            more intuitive, visually appealing, and user-friendly.
+            To build the platform, I broke the project into manageable tasks,
+            created user stories, and prioritized features based on MVP. The MVP
+            included user authentication, subject selection, difficulty
+            assessment, and a dashboard listing the topics. Afterwards, I
+            selected and integrated a large language model (LLM), and created
+            content for lessons and topics. <br /> On the backend, I created the
+            database models using Django and migrated them. Thanks to Django`s
+            admin interface, it was straightforward to manage the data and
+            ensure it was being saved correctly in the database. Once the core
+            features were in place, I focused on refining the prompts to improve
+            content accuracy, validating outputs with Pydantic to ensure
+            consistency and reliability. <br /> To enhance performance and
+            responsiveness, I implemented asynchronous behavior using Celery and
+            Redis, which allowed tasks to run in the background and be managed
+            efficiently via a task queue. <br /> Finally, after ensuring
+            functionality and performance, I refined the UI, making it more
+            intuitive and user-friendly, and enhancing the overall user
+            experience.
           </p>
         </div>
       </div>
@@ -119,18 +116,22 @@ export default function AilmsProCaseStudy() {
             The Challenges
           </h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            This project was both my favorite and the most challenging one I
-            have worked on. One of the main difficulties was obtaining valid
-            responses from the Large Language Model (LLM). I used Pydantic to
-            validate the returned JSON schema and experimented with several LLMs
-            before finding the one that performed best for my use case. I have
-            also carefully tuned the AI’s prompt to generate an accurate
-            response. Another significant challenge was implementing
-            asynchronous behavior to improve the user experience. Distributing
-            tasks efficiently required careful setup, so I integrated Celery
-            with Redis to handle background processing, ensuring that content
-            generation and other operations ran smoothly without slowing down
-            the platform.
+            I faced several challenges during this project. Initially, obtaining
+            valid and consistent responses from the LLM was problematic. Even
+            after validating outputs with Pydantic, some formats and content
+            were not appropriate. To address this, I spent time refining the
+            prompts and adding a layer of formatting rules before saving
+            responses to ensure consistency. <br />
+            Another significant challenge was implementing asynchronous behavior
+            to improve the user experience. Therefore, I integrated Celery with
+            Redis for background processing, ensuring that content generation
+            and other operations ran smoothly without blocking the platform.
+            <br />
+            Finally, deploying the application on Google Cloud Platform (GCP)
+            presented additional complexity. With the support of my mentor
+            Renish, we configured a virtual machine, containerized the
+            application using Docker, and successfully deployed it in the cloud,
+            ensuring reliable hosting.
           </p>
         </div>
 
@@ -159,11 +160,13 @@ export default function AilmsProCaseStudy() {
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">The Outcome</h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            The entire process, from development to deployment, took around
-            three months. I deployed the platform using Google Cloud Platform
-            (GCP), and it is now fully functional. Working on this project was
-            an incredibly rewarding experience, as it allowed me to explore and
-            apply technologies I had never used before.
+            The entire process took approximately three months. The platform is
+            now fully functional and accessible to anyone, and I hope it will
+            help users discover and learn new things every day.
+            <br />
+            This project was highly rewarding, as it allowed me to explore and
+            strengthen my skills with the chosen tech stack, providing valuable
+            real-world experience.
           </p>
           <p className="text-gray-500">View the app here:</p>
           <div className="flex items-center gap-6 mt-4">
@@ -199,18 +202,22 @@ export default function AilmsProCaseStudy() {
           </p>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
             <strong>Future improvements:</strong> I plan to expand the platform
-            with new capabilities and a more engaging user experience:
+            with new capabilities and a more engaging user experience, for
+            example:
           </p>
           <ul className="list-disc ml-5 text-gray-500 mb-4 dark:text-gray-300">
             <li>
-              Allow users to pick any subject, including multiple per profile
-            </li>
-            <li>Generate longer and more detailed educational content</li>
-            <li>
-              Add more quizzes at the end of lessons to increase interactivity
+              Allow users to pick any subject, including multiple per profile.
             </li>
             <li>
-              Enhance the overall UI/UX for a smoother learning experience
+              Generate longer and more detailed educational content and provide
+              live AI help chat.
+            </li>
+            <li>
+              Add quizzes at the end of lessons to increase interactivity.
+            </li>
+            <li>
+              Enhance the overall UI/UX for a smoother learning experience.
             </li>
           </ul>
         </div>
