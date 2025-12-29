@@ -29,7 +29,7 @@ export default function RootLayout({
       <head>
         <meta
           name="description"
-          content="Welcome to Roberto Costantino's World"
+          content="Welcome to Roberto Costantino's Portfolio"
         />
       </head>
       <body

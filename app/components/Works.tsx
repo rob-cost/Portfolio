@@ -46,7 +46,7 @@ function Works() {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.9 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
         className="grid md:grid-cols-2 gap-10 justify-items-center"
       >
         {projects.map((project, index) => (

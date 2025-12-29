@@ -71,10 +71,11 @@ const About = () => {
             My background in gastronomy helped me develop a strong creative
             mindset and the ability to think pragmatically under pressure. I
             bring this creativity into software development, where
-            problem-solving and adaptability are key. Coding has become an
-            essential part of my life, and I’m continuously looking for new
-            challenges while learning and improving my skills as a web
-            developer.
+            problem-solving and adaptability are key.
+            <br />
+            Coding has become an essential part of my life, and I’m continuously
+            looking for new challenges while learning and improving my skills as
+            a web developer.
           </p>
 
           <ul>
