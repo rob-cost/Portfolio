@@ -56,21 +56,25 @@ const About = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           <p className="mb-10 w-full max-w-3xl leading-8 font-Ovo">
-            I’m a curious and driven person with a strong passion for
-            technology. Through my past work experiences, I’ve developed solid
-            <strong> teamwork </strong> and <strong>leadership </strong> skills,
-            <strong> managing </strong> teams, handling daily operations, and
-            working well under pressure and tight deadlines. My philosophy has
-            always been to create a respectful and productive environment where
-            everyone can perform at their best.
-            <br /> I am a web developer with certification in modern
-            technologies and I’m eager to keep learning and growing in this
-            exciting field, where every team member can contribute to building
-            something meaningful. I bring a strong
-            <strong> work ethic </strong>, a <strong>creative spirit</strong>,
-            and a <strong>loyal mindset</strong> to every project I’m part of.
-            I’m also a big fan of electronic music, a hobby that keeps me
-            inspired both inside and outside of tech.
+            I’m a web developer with a backend focus and a passion for building
+            reliable web applications.
+            <br /> I come from professional environments where teamwork,
+            responsibility, and loyalty were essential, and I bring those same
+            values into my work as a developer.
+            <br />
+            Through my previous roles I developed solid leadership and
+            collaboration skills managing daily opeartions and supporting teams.
+            These experiences strengthened my communication skills and sense of
+            ownership, pushing me to pay close attention to detail in everything
+            I build.
+            <br />
+            My background in gastronomy helped me develop a strong creative
+            mindset and the ability to think pragmatically under pressure. I
+            bring this creativity into software development, where
+            problem-solving and adaptability are key. Coding has become an
+            essential part of my life, and I’m continuously looking for new
+            challenges while learning and improving my skills as a web
+            developer.
           </p>
 
           <ul>
