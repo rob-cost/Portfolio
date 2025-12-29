@@ -290,14 +290,19 @@ export const toolsBadges = [
       "inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-sm font-medium text-pink-700 ring-1 ring-inset ring-pink-700/10 dark:bg-pink-400/10 dark:text-pink-400 dark:ring-pink-400/20",
   },
   {
+    name: "React",
+    className:
+      "inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-sm font-medium text-green-700 ring-1 ring-inset ring-green-600/20 dark:bg-blue-400/10 dark:text-blue-400 dark:ring-blue-400/30",
+  },
+  {
     name: "Django",
     className:
       "inline-flex items-center rounded-md bg-orange-50 px-2 py-1 text-sm font-medium text-orange-700 ring-1 ring-inset ring-orange-600/10 dark:bg-orange-400/10 dark:text-orange-400 dark:ring-orange-400/20",
   },
   {
-    name: "React",
+    name: "FastAPI",
     className:
-      "inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-sm font-medium text-green-700 ring-1 ring-inset ring-green-600/20 dark:bg-blue-400/10 dark:text-blue-400 dark:ring-blue-400/30",
+      "inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-sm font-medium text-yellow-500 ring-1 ring-inset ring-yellow-600/20 dark:bg-yellow-400/10 dark:text-yellow-400 dark:ring-yellow-500/20",
   },
   {
     name: "NodeJS",
