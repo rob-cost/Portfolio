@@ -16,9 +16,10 @@ export default function MealMindCaseStudy() {
       <div className="text-center space-y-4">
         <h1 className="text-5xl font-Ovo font-bold">MealMind</h1>
         <p className="text-gray-400 text-lg max-w-3xl mx-auto dark:text-gray-300">
-          MealMind is a recipe collection platform where users can share,
-          search, and explore recipes. The recipes are collcted in a database
-          and shared with everyone.
+          MealMind is a recipe collection platform that allows users to share,
+          search, and explore recipes. All recipes are accessible to the
+          community, making it easy for users to discover new dishes and cooking
+          ideas.
         </p>
       </div>
 
@@ -173,9 +174,9 @@ export default function MealMindCaseStudy() {
       <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
         <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
           <Image
-            src="/meal-mind_outcome.png"
+            src="/meal-mind_outcome_2.png"
             alt="MealMind Outcome"
-            className="object-cover rounded-lg"
+            className="object-cover object-center rounded-lg"
             fill
           />
         </div>
@@ -243,7 +244,7 @@ export default function MealMindCaseStudy() {
           <Image
             src="/meal-mind_futuresteps.png"
             alt="MealMind Future Steps"
-            className="object-contain object-center rounded-lg mx-auto"
+            className="object-cover object-center rounded-lg mx-auto"
             fill
           />
         </div>

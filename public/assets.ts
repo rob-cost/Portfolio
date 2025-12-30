@@ -112,27 +112,10 @@ export const projects: Project[] = [
     slug: "ailmspro",
   },
   {
-    title: "RetroFlix",
-    image: "/background-retroflix.png",
-    description:
-      "Retroflix is a full-stack movie app built with MERN stack that allows users to browse and manage movies with a responsive layout and backend integration",
-    techStack: [
-      "React",
-      "JavaScript",
-      "Bootstrap",
-      "MongoDB",
-      "Node.js",
-      "Express.js",
-    ],
-    githubUrl: "https://github.com/rob-cost/CF-RetroFlix_Client",
-    liveDemoUrl: "https://retroflixvintage.netlify.app",
-    slug: "retroflix",
-  },
-  {
     title: "MealMind",
     image: "/meal-mind_outcome.png",
     description:
-      "A comprehensive Django-based web application for managing and discovering recipes",
+      "A recipes collection platform to search, add, and explore new recipes from around the world",
     techStack: [
       "Django",
       "Python",
@@ -145,6 +128,24 @@ export const projects: Project[] = [
     liveDemoUrl: "https://recipes-discover-app-7480a557fb61.herokuapp.com/",
     slug: "meal-mind",
   },
+  // {
+  //   title: "RetroFlix",
+  //   image: "/background-retroflix.png",
+  //   description:
+  //     "Retroflix is a full-stack movie app built with MERN stack that allows users to browse and manage movies with a responsive layout and backend integration",
+  //   techStack: [
+  //     "React",
+  //     "JavaScript",
+  //     "Bootstrap",
+  //     "MongoDB",
+  //     "Node.js",
+  //     "Express.js",
+  //   ],
+  //   githubUrl: "https://github.com/rob-cost/CF-RetroFlix_Client",
+  //   liveDemoUrl: "https://retroflixvintage.netlify.app",
+  //   slug: "retroflix",
+  // },
+
   // {
   //   title: "Meet-App",
   //   image: "/works-img/meetapp.png",
