@@ -28,7 +28,7 @@ export default function AilmsProCaseStudy() {
             <strong>Role:</strong> Fullstack Developer
           </p>
           <p>
-            <strong>Duration:</strong> 5 months
+            <strong>Duration:</strong> 3 months
           </p>
           <p>
             <strong>Credits:</strong> Renish Bhaskaran (Backend Developer)

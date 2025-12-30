@@ -16,11 +16,11 @@ export default function MealMindCaseStudy() {
       <div className="text-center space-y-4">
         <h1 className="text-5xl font-Ovo font-bold">MealMind</h1>
         <p className="text-gray-400 text-lg max-w-3xl mx-auto dark:text-gray-300">
-          MealMind is a recipe platform that helps users organize their meals
-          and discover new dishes. It’s an open and community-driven space where
-          everyone can share, search, and explore recipes from a global
-          database.
+          MealMind is a recipe collection platform where users can share,
+          search, and explore recipes. The recipes are collcted in a database
+          and shared with everyone.
         </p>
+        ´
       </div>
 
       {/* Section 0: Specs */}
@@ -44,15 +44,17 @@ export default function MealMindCaseStudy() {
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">The Overview</h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            MealMind was developed as a full-stack project focused on meal
-            organization and recipe discovery. The idea was to create a
-            centralized platform where users can both find and contribute
-            recipes, fostering a sense of shared culinary exploration.
-          </p>
-          <p className="text-gray-500 mb-4 dark:text-gray-300">
-            The app features a structured recipe database, a user-friendly
-            interface, and powerful search functionality that allows filtering
-            recipes quickly based on different criterias.
+            MealMind is a full-stack web application developed using the Django
+            framework. The project was conceived as a platform where users can
+            both discover and add recipes, transforming the app into a
+            collaborative database of dishes from around the world.
+            <br />
+            In addition to browsing recipes, users can create profiles and save
+            their favorite dishes for easy access. The application features a
+            well-structured recipe database, an intuitive and user-friendly
+            interface, and a search system that enables users to filter recipes
+            efficiently based on multiple criteria. The app also includes data
+            visualizations that analyze trends across the recipe collection.
           </p>
         </div>
 
@@ -60,7 +62,7 @@ export default function MealMindCaseStudy() {
           <Image
             src="/meal-mind_overview.png"
             alt="MealMind Overview"
-            className="object-contain object-center rounded-lg mx-auto"
+            className="object-cover object-center rounded-lg"
             fill
           />
         </div>
@@ -68,55 +70,103 @@ export default function MealMindCaseStudy() {
 
       {/* Section 2: The Approach */}
       <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
-        <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
-          <Image
-            src="/meal-mind_approach.png"
-            alt="MealMind Approach"
-            className="object-contain object-center rounded-lg mx-auto"
-            fill
-          />
+        {/* Image */}
+        <div className="md:w-1/2 flex flex-col gap-4">
+          {["/meal-mind_approach_2.png", "/meal-mind_approach.png"].map(
+            (src, i) => (
+              <div
+                key={i}
+                className="relative flex-1 h-60 rounded-lg overflow-hidden"
+              >
+                <Image
+                  src={src}
+                  alt="meal-mind_approach"
+                  height={200}
+                  width={500}
+                  className="object-cover rounded-lg"
+                />
+              </div>
+            )
+          )}
         </div>
 
+        {/* Text */}
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">The Approach</h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            I started by designing the database models to efficiently store and
-            relate recipe information. Once the data structure was solid, I
-            moved on to refining the user experience, ensuring intuitive
-            navigation and fast interactions.
+            The development of MealMind followed an agile approach. I began by
+            defining user stories to identify user needs and translating them
+            into small, manageable tasks. This structure allowed me to iterate
+            consistently and maintain flexibility throughout the development
+            process.
+            <br /> As a first step, I started by designing the data models for
+            recipes and users, then implemented user authentication to handle
+            registration, login, and user-specific interactions, leveraging
+            Django’s built-in authentication forms. For adding and searching
+            recipes, I used Django Forms and ModelForms, which ensured secure
+            handling of user input, built-in validation, and a cleaner approach.
+            <br />
+            With the backend foundation in place, I moved on to implementing the
+            main application views, including the homepage, recipe cards, and a
+            popular recipes section, ensuring that data was retrieved and
+            displayed efficiently.
           </p>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            I then implemented a robust search feature, allowing users to find
-            recipes quickly by applying specific filters. Using libraries like
-            <strong>matplotlib</strong> and <strong>pandas</strong>, I created
-            data visualizations that show recipe insights and trends, giving
-            users an overview of their choices. Pagination was also added to
-            maintain a clean and efficient UI.
+            Next, I developed a search dashboard that allows users to filter
+            recipes based on multiple criteria. I also integrated data
+            visualization features using Pandas and Matplotlib, enabling the
+            application to display charts that highlight trends within the
+            recipe dataset. Once the core functionality was complete, I focused
+            on refining the design and overall user experience, improving layout
+            consistency, accessibility, and interaction flow to ensure the
+            application was intuitive and engaging.
           </p>
         </div>
       </div>
 
       {/* Section 3: The Challenges */}
-      <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
+      <div className="flex flex-col md:flex-row pt-20 gap-8">
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">
             The Challenges
           </h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            The most significant challenge was learning how to properly use and
-            integrate data visualization libraries like matplotlib and pandas.
-            Understanding the different chart types, their parameters, and how
-            to represent recipe data effectively.
+            One of the main challenges in developing MealMind was integrating
+            data analysis and visualization features into the app. Using Pandas
+            and Matplotlib required transforming Django querysets into suitable
+            data structures for analysis, ensuring that the extracted data was
+            accurate, efficient, and aligned with the visual insights I wanted
+            to present.
+            <br />
+            Another challenge was designing the search dashboard. Implementing
+            filtering across multiple criteria required to create querysets to
+            ensure correct results while maintaining performance and
+            readability. This process deepened my understanding of Django’s ORM,
+            query optimization, and the importance of structuring data models to
+            support various queries.
+            <br />
+            Through these challenges, I strengthened my ability to work with
+            database querysets and with data visualization, building scalable,
+            user-focused features based on structured queries.
           </p>
         </div>
 
-        <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
-          <Image
-            src="/meal-mind_challenges.png"
-            alt="MealMind Challenges"
-            className="object-contain object-center rounded-lg mx-auto"
-            fill
-          />
+        <div className="md:w-1/2 flex flex-col gap-4">
+          {["/meal-mind_challenges_2.png", "/meal-mind_challenges.png"].map(
+            (src, i) => (
+              <div
+                key={i}
+                className="relative flex-1 h-60 rounded-lg overflow-hidden"
+              >
+                <Image
+                  src={src}
+                  alt="meal-mind_approach"
+                  className="object-cover rounded-lg"
+                  fill
+                />
+              </div>
+            )
+          )}
         </div>
       </div>
 
@@ -134,11 +184,12 @@ export default function MealMindCaseStudy() {
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">The Outcome</h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            The final version of MealMind is a fully functional, deployed
-            application hosted on Heroku. Users can browse, search, and share
-            recipes within a growing community. The visual analytics provide
-            users with insights into popular recipe trends and ingredient
-            combinations.
+            MealMind is a fully functional web application that I deployed on
+            Heroku.
+            <br />
+            Its goal is to help users discover new recipes in an easy and
+            interactive way, making meal planning more simple, enjoyable, and
+            engaging.
           </p>
           <p className="text-gray-500">View the app here:</p>
           <div className="flex items-center gap-6 mt-4">
@@ -171,9 +222,21 @@ export default function MealMindCaseStudy() {
             with additional features and refinements, including:
           </p>
           <ul className="list-disc ml-5 text-gray-500 mb-4 dark:text-gray-300">
-            <li>A more visually appealing and responsive UI/UX</li>
-            <li>User profile pages with saved recipes and personal info</li>
-            <li>Community features like comments and ratings</li>
+            <li>
+              Improving the UI/UX for a more visually appealing and fully
+              responsive experience.
+            </li>
+            <li>
+              Enhancing Recipe Cards to include detailed cooking steps and tips.
+            </li>
+            <li>
+              Adding community features, such as comments, ratings, and recipe
+              sharing.
+            </li>
+            <li>
+              Integrating personalized recommendations based on user preferences
+              and trends.
+            </li>
           </ul>
         </div>
 
