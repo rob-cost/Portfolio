@@ -20,7 +20,6 @@ export default function MealMindCaseStudy() {
           search, and explore recipes. The recipes are collcted in a database
           and shared with everyone.
         </p>
-        ´
       </div>
 
       {/* Section 0: Specs */}
