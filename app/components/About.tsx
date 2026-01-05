@@ -56,34 +56,29 @@ const About = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           <p className="mb-10 w-full max-w-3xl leading-8 font-Ovo">
-            I’m a web developer with a backend focus and a passion for building
-            reliable web applications.
-            <br /> I come from professional environments where teamwork,
-            responsibility, and loyalty were essential, and I bring those same
+            I am a web developer with a back-end focus and a passion for
+            building reliable web applications.
+            <br />
+            I come from many professional environments where teamwork,
+            responsibility, and loyalty are essential, and I bring those same
             values into my work as a developer.
             <br />
             Through my previous roles I developed solid leadership and
-            collaboration skills managing daily opeartions and supporting teams.
-            These experiences strengthened my communication skills and sense of
-            ownership, pushing me to pay close attention to detail in everything
-            I build.
+            collaboration skills managing daily opeartions, supporting teams and
+            communications to upper managment. These experiences strengthened my
+            communication skills and sense of ownership, pushing me to pay close
+            attention to detail in every task I was assigned to.
             <br />
-            My background in gastronomy helped me develop a strong creative
-            mindset and the ability to think pragmatically under pressure. I
-            bring this creativity into software development, where
-            problem-solving and adaptability are key.
+            My previous roles have helped me develop a strong creative mindset
+            and the ability to think pragmatically under pressure. I bring this
+            creativity into software development, where problem-solving and
+            adaptability are key.
             <br />
-            Coding has become an essential part of my life, and I’m continuously
-            looking for new challenges while learning and improving my skills as
-            a web developer.
+            Coding has become an essential part of my life, and I am
+            continuously looking for new challenges while learning and improving
+            my skills as a web developer.
           </p>
 
-          <ul>
-            {/* {infoList.map(({ title, description }, index) => (
-              <li key={index}>
-                <h3>{title}</h3>
-                <p>{description}</p> */}
-          </ul>
           <motion.h4
             className="my-6 text-gray-700 font-Ovo dark:text-white/80"
             initial={{ opacity: 0, y: 20 }}
