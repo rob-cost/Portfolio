@@ -102,6 +102,17 @@ type Project = {
 
 export const projects: Project[] = [
   {
+    title: "MixScope Audio Mix Analyzer",
+    image: "/works-img/mixScope/mixScope.png",
+    description:
+      "A web application designed to analyze audio tracks, optionally compared against a reference track, and provide technical feedback to support audio engineers during the mixing phase.",
+    techStack: ["Python", "FastAPI", "Groq", "Librosa", "TypeScript", "React"],
+    githubUrl: "",
+    liveDemoUrl: "",
+    slug: "audio-mix-analyzer",
+  },
+
+  {
     title: "AI Learning Platform",
     image: "/works-img/ailearningplatform.png",
     description:

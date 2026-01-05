@@ -3,6 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import NextVideo from "next-video";
+import video from "@/videos/mixScope-video.mp4";
 
 export default function AudioMixAnalyserCaseStudy() {
   return (
@@ -14,14 +16,16 @@ export default function AudioMixAnalyserCaseStudy() {
     >
       {/* Header */}
       <div className="text-center space-y-4">
-        <h1 className="text-5xl font-Ovo font-bold">Audio Mix Analyser</h1>
+        <h1 className="text-5xl font-Ovo font-bold">
+          MixScope | Audio Mix Analyzer
+        </h1>
         <p className="text-gray-400 text-lg max-w-3xl mx-auto dark:text-gray-300">
-          Audio Mix Analyzer is a web application designed to analyze music
-          tracks, optionally compared against a reference track, and provide
-          technical feedback to support audio engineers during the mixing phase.
-          Originally developed as a freelance project, it evolved into an open
-          web application accessible to a whoever needs an expert-level mixing
-          guidance.
+          MixScope is a web application designed to analyze audio tracks,
+          optionally compared against a reference track, and provide technical
+          feedback to support audio engineers during the mixing phase. The
+          project was developed for a private individual and is currently used
+          as an internal tool to deliver fast, reliable, and expert-level mix
+          analysis.
         </p>
       </div>
 
@@ -32,16 +36,16 @@ export default function AudioMixAnalyserCaseStudy() {
             <strong>Role:</strong> Lead Developer
           </p>
           <p>
-            <strong>Duration:</strong> 3 months
+            <strong>Duration:</strong> 2 months
           </p>
           <p>
-            <strong>Team:</strong> Xochilt Cojal (Graphic Designer), Yuval
-            Miller (Audio Engineer)
+            <strong>Team:</strong> Roberto Costantino (Lead Developer) Xochilt
+            Cojal (Graphic Designer), Yuval Muller (Audio Engineer)
           </p>
 
           <p>
-            <strong>Tech-Stack:</strong> Python, Librosa, TypeScript, React,
-            Groq
+            <strong>Tech-Stack:</strong> Python, FastAPI, Librosa, TypeScript,
+            React, Groq
           </p>
         </div>
       </div>
@@ -53,19 +57,19 @@ export default function AudioMixAnalyserCaseStudy() {
           <p className="text-gray-500 mb-4 dark:text-gray-300">
             The goal of the project was to create a tool that goes beyond basic
             audio metrics and delivers actionable, engineer-oriented feedback.
-            Audio Mix Analyzer focuses on providing insights that are actually
-            useful in a professional mixing context. The application processes
-            uploaded audio files, extracts advanced audio features, and
-            translates this data into structured, technical feedback using a
-            LLM. This allows users to quickly identify weaknesses in areas such
-            as loudness, dynamics, stereo image, frequency spectrum, either
-            standalone or relative to a reference track.
+            MixScope focuses on providing insights that are actually useful in a
+            professional mixing context. The application processes uploaded
+            audio files, extracts advanced audio features, and translates this
+            data into structured, technical feedback using an LLM. This enables
+            the client to quickly identify weaknesses in areas such as loudness,
+            dynamics, stereo image, and spectral balance—either as a standalone
+            analysis or in comparison with a reference track.
           </p>
         </div>
 
         <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
           <Image
-            src="/meal-mind_overview.png"
+            src="/works-img/mixScope/mixScope.png"
             alt="MealMind Overview"
             className="object-cover object-center rounded-lg"
             fill
@@ -77,52 +81,61 @@ export default function AudioMixAnalyserCaseStudy() {
       <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
         {/* Image */}
         <div className="md:w-1/2 flex flex-col gap-4">
-          {["/meal-mind_approach_2.png", "/meal-mind_approach.png"].map(
-            (src, i) => (
-              <div
-                key={i}
-                className="relative flex-1 h-60 rounded-lg overflow-hidden"
-              >
-                <Image
-                  src={src}
-                  alt="meal-mind_approach"
-                  height={200}
-                  width={500}
-                  className="object-cover rounded-lg"
-                />
-              </div>
-            )
-          )}
+          {[
+            "/works-img/mixScope/mixScope-analysisTempo.png",
+            "/works-img/mixScope/mixScope-figma.png",
+          ].map((src, i) => (
+            <div
+              key={i}
+              className="relative flex-1 h-60 rounded-lg overflow-hidden"
+            >
+              <Image
+                src={src}
+                alt="mixScope_pipeline"
+                height={200}
+                width={500}
+                className="object-cover rounded-lg"
+              />
+            </div>
+          ))}
         </div>
 
         {/* Text */}
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">The Approach</h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            To build the application, I first focused on defining the core
-            analysis goals and identifying which audio features would be
-            genuinely useful in a professional mixing context. Based on this, I
-            designed an initial MVP centered on single-track analysis, with
-            optional reference-track comparison.
+            To build the application, I began by defining the core analysis
+            objectives together with the client and the audio engineer,
+            identifying which audio features the client expected to extract from
+            the analysis. Based on these requirements, I designed the initial
+            MVP architecture.
             <br />
-            I started by developing the backend in Python, using NumPy, Librosa
-            and other audio libraries, to extract relevant audio features from
-            uploaded tracks. The initial implementation focused on analyzing
-            stereo imaging, loudness, dynamics, and spectral balance across
-            different frequency ranges.
+            I developed the backend in Python, using NumPy, Librosa, and other
+            audio-processing libraries to extract audio features from uploaded
+            tracks. From the beginning, I focused on keeping the processing
+            pipeline efficient by limiting computation to essential and
+            meaningful features only. Throughout this phase, I worked in close
+            collaboration with the audio engineer, continuously validating the
+            extracted data and refining the analysis pipeline to ensure both
+            technical accuracy and practical usefulness for mix evaluation.
             <br />
             Once reliable audio features were available, I integrated an LLM to
-            convert the extracted data into structured, human-readable feedback.
-            I worked closely with a professional audio engineer to design a
-            prompt that enforced technical language, clear structure, and
-            practical processing recommendations (e.g. EQ, compression, stereo
-            adjustments). After validating the analytical accuracy, I focused on
-            performance, refining the audio analysis pipeline and improving
-            overall responsiveness.
+            convert the extracted data into structured, professional feedback.
+            In this phase as well, I worked closely with the audio engineer to
+            design and refine a prompt that enforced technical language, clear
+            structure, and actionable processing recommendations, such as EQ,
+            compression, and stereo adjustments.
             <br />
-            Finally, I ensured that the system consistently returned clear,
-            technically relevant feedback suitable for real-world mixing
-            workflows.
+            In parallel, I collaborated closely with the graphic designer to
+            improve the UI/UX, aligning the visual design and interaction
+            patterns with the client’s expectations. This process ensured that
+            the information was presented in a clear, intuitive, and efficient
+            way.
+            <br />
+            After validating both analytical accuracy and usability, I focused
+            on performance optimization, refining the audio analysis pipeline
+            and improving overall system responsiveness to meet the client’s
+            requirements for speed and reliability.
           </p>
         </div>
       </div>
@@ -154,33 +167,21 @@ export default function AudioMixAnalyserCaseStudy() {
         </div>
 
         <div className="md:w-1/2 flex flex-col gap-4">
-          {["/meal-mind_challenges_2.png", "/meal-mind_challenges.png"].map(
-            (src, i) => (
-              <div
-                key={i}
-                className="relative flex-1 h-60 rounded-lg overflow-hidden"
-              >
-                <Image
-                  src={src}
-                  alt="meal-mind_approach"
-                  className="object-cover rounded-lg"
-                  fill
-                />
-              </div>
-            )
-          )}
+          <div className="relative flex-1 h-60 rounded-lg overflow-hidden">
+            <Image
+              src={"/works-img/mixScope/mixScope-challenges.png"}
+              alt="meal-mind_approach"
+              className="object-cover rounded-lg"
+              fill
+            />
+          </div>
         </div>
       </div>
 
       {/* Section 4: The Outcome */}
       <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
         <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
-          <Image
-            src="/meal-mind_outcome_2.png"
-            alt="MealMind Outcome"
-            className="object-cover object-center rounded-lg"
-            fill
-          />
+          <NextVideo src={video} className="object-cover rounded-lg" />
         </div>
 
         <div className="md:w-1/2">
@@ -191,40 +192,22 @@ export default function AudioMixAnalyserCaseStudy() {
             essential features only. I also implemented asynchronous processing,
             allowing multiple analysis tasks to run in parallel and improving
             overall system responsiveness. These optimizations reduced the
-            average analysis time by approximately 50%, while maintaining
-            analytical accuracy.
+            average analysis time by approximately ~30%, while being accurate.
             <br />
-            On the feedback side, refining the prompt in collaboration with an
-            audio engineer significantly improved the quality and consistency of
-            the generated responses.
+            On the feedback side, refining the prompt in close collaboration
+            with the audio engineer greatly improved the quality, consistency,
+            and technical reliability of the generated responses. The final
+            system provides detailed insights into stereo image, loudness,
+            dynamics, and spectral balance, along with concrete suggestions on
+            how to improve a mix.
             <br />
-            The final system provides detailed insights into stereo image,
-            loudness, dynamics, and spectral balance, along with concrete
-            suggestions on how to improve the mix.
-            <br />
-            The Audio Mix Analyzer is now a powerful tool available to anyone
-            who needs it, with the goal of simplifying the daily workflow of
-            music producers and audio engineers.
+            MixScope is now a robust tool designed to simplify the daily
+            workflow of music producers and audio engineers by delivering fast,
+            reliable, and professional mix feedback.
           </p>
-          <p className="text-gray-500">View the app here:</p>
-          <div className="flex items-center gap-6 mt-4">
-            <a
-              href="https://github.com/rob-cost/recipe-app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm underline hover:text-gray-500"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://meal-mind-8b5f4fc6197b.herokuapp.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm underline hover:text-gray-500"
-            >
-              Live Demo
-            </a>
-          </div>
+          <p className="text-gray-500">
+            Contact me for more information about the App and code.
+          </p>
         </div>
       </div>
 
@@ -233,8 +216,8 @@ export default function AudioMixAnalyserCaseStudy() {
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">Future Steps</h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            <strong>Future improvements:</strong> I plan to enhance this project
-            with additional features, including:
+            <strong>Future improvements:</strong> Potential future improvements
+            for the project include:
           </p>
           <ul className="list-disc ml-5 text-gray-500 mb-4 dark:text-gray-300">
             <li>
@@ -256,8 +239,8 @@ export default function AudioMixAnalyserCaseStudy() {
 
         <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
           <Image
-            src="/meal-mind_futuresteps.png"
-            alt="MealMind Future Steps"
+            src="/works-img/mixScope/mixScope-futureSteps.png"
+            alt="MixScope Future Steps"
             className="object-cover object-center rounded-lg mx-auto"
             fill
           />
