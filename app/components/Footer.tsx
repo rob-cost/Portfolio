@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="mt-20">
       <div className="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
-        <p>© 2025 Roberto Costantino. All rights reserved.</p>
+        <p>© 2026 Roberto Costantino. All rights reserved.</p>
         <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
           <li>
             <a target="_blank" href="mailto:robscostantino@gmail.com">
