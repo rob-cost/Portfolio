@@ -154,11 +154,11 @@ export default function AudioMixAnalyserCaseStudy() {
             <br />
             Another challenge was balancing speed and accuracy. Reducing
             computation time without compromising the quality of extracted audio
-            features required reconstruct the audio pipeline and a deeper
+            features required reconstructing the audio pipeline and a deeper
             evaluation of which data was strictly necessary for meaningful
             feedback.
             <br />
-            Also generating reliable LLM output was quiet challenging. Early
+            Also generating reliable LLM output was quite challenging. Early
             iterations produced feedback that was sometimes too generic or
             inconsistent. This required prompt refinement and tighter
             constraints on how the model interpreted the extracted audio

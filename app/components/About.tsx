@@ -64,10 +64,10 @@ const About = () => {
             values into my work as a developer.
             <br />
             Through my previous roles I developed solid leadership and
-            collaboration skills managing daily opeartions, supporting teams and
-            communications to upper managment. These experiences strengthened my
-            communication skills and sense of ownership, pushing me to pay close
-            attention to detail in every task I was assigned to.
+            collaboration skills managing daily operations, supporting teams and
+            communications to upper management. These experiences strengthened
+            my communication skills and sense of ownership, pushing me to pay
+            close attention to detail in every task I was assigned to.
             <br />
             My previous roles have helped me develop a strong creative mindset
             and the ability to think pragmatically under pressure. I bring this
