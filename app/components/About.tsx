@@ -42,7 +42,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
         >
           <Image
-            src="/profile.jpg"
+            src="/profile_2.jpeg"
             alt="user"
             width={500}
             height={500}
