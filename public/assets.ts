@@ -123,6 +123,16 @@ export const projects: Project[] = [
     slug: "ailmspro",
   },
   {
+    title: "Discogs Filter Enhancer",
+    image: "",
+    description:
+      "A modular CLI application that extends Discogs' API with additional filtering logic not available in the platform, including single-style matching, rarity filtering, and automated result exporting.",
+    techStack: ["Python", "Discogs API"],
+    githubUrl: "https://github.com/rob-cost/Discogs-Finder",
+    liveDemoUrl: "https://ailmspro.roberto-costantino.com/",
+    slug: "discogs-filter-enhancer",
+  },
+  {
     title: "MealMind",
     image: "/meal-mind_outcome.png",
     description:
