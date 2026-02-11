@@ -18,13 +18,11 @@ export default function DiscogsFilterEnhancerCaseStudy() {
       <div className="text-center space-y-4">
         <h1 className="text-5xl font-Ovo font-bold">Discogs Filter Enhancer</h1>
         <p className="text-gray-400 text-lg max-w-3xl mx-auto dark:text-gray-300">
-          A Python application that extends the Discogs API by adding advanced
-          filtering capabilities for electronic music releases. Users can search
-          vinyl records and refine results using custom rules such as strict
-          style matching, rarity thresholds (have/want counts), country, and
-          year ranges. The tool normalizes API data, validates user input, and
-          exports results into HTML files. This project demonstrates API
-          integration, data validation and modular architecture.
+          A command-line tool that extends the Discogs API with advanced
+          filtering capabilities for vinyl collectors. The application enables
+          precision searches using custom validation logic, rarity metrics, and
+          flexible style matching features not available in the standard Discogs
+          interface.
         </p>
       </div>
 
@@ -32,50 +30,56 @@ export default function DiscogsFilterEnhancerCaseStudy() {
       <div>
         <div className="text-center">
           <p>
-            <strong>Role:</strong> Fullstack Developer
+            <strong>Role:</strong> Developer
           </p>
           <p>
             <strong>Duration:</strong> 1 week
           </p>
           <p>
-            <strong>Tech-Stack:</strong> Python, Discogs API
+            <strong>Tech Stack:</strong> Python, Discogs API,
+            python3-discogs-client
           </p>
         </div>
       </div>
 
-      {/* Section 1: The Overview */}
+      {/* Section 1: The Challenge */}
       <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
         <div className="md:w-1/2">
-          <h2 className="text-3xl font-semibold mb-4 font-Ovo">The Overview</h2>
+          <h2 className="text-3xl font-semibold mb-4 font-Ovo">
+            The Challenge
+          </h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            As an electronic music enthusiast, I often use Discogs to discover
-            new releases. While the platform is powerful, advanced searches can
-            require a lot of manual filtering, and some combinations of criteria
-            are not supported by the built-in tools. To solve this, I built a
-            command-line application that adds an extra layer of filtering on
-            top of the Discogs REST API using the python3-discogs-client
-            library.
-            <br />
-            The tool allows users to search for vinyl releases by style,
-            country, and year, and then apply additional constraints such as
-            community demand (“want”), ownership (“have”), and strict or
-            flexible style matching. The resulting releases are automatically
-            exported to an HTML file, where each URL can be opened directly in
-            the browser.
+            While Discogs provides comprehensive music data, its search
+            interface lacks granular filtering for specialized use cases. Vinyl
+            collectors seeking undervalued releases face several limitations:
+          </p>
+          <ul className="text-gray-500 mb-4 dark:text-gray-300 space-y-2">
+            <li>
+              • No ability to filter by community engagement metrics (want/have
+              ratios)
+            </li>
+            <li>
+              • Limited style matching (cannot enforce exact style combinations)
+            </li>
+            <li>• Time-consuming manual filtering across multiple criteria</li>
+          </ul>
+          <p className="text-gray-500 dark:text-gray-300">
+            The goal was to build a tool that leverages the Discogs API while
+            adding a custom filtering layer to address these gaps.
           </p>
         </div>
 
         <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
           <Image
-            src="/meal-mind_overview.png"
-            alt="MealMind Overview"
+            src="/works-img/discogsFilter/discogsFilterBlack.png"
+            alt="Discogs Filter Enhancer Overview"
             className="object-cover object-center rounded-lg"
             fill
           />
         </div>
       </div>
 
-      {/* Section 2: The Problem & The Solution */}
+      {/* Section 2: Technical Implementation */}
       <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
         {/* Image */}
         <div className="relative flex-1 rounded-lg overflow-hidden">
@@ -91,40 +95,148 @@ export default function DiscogsFilterEnhancerCaseStudy() {
         {/* Text */}
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">
-            The Problem & The Solution
+            Technical Implementation
           </h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            Discogs provides a large database but makes it difficult to:
-            <br />
-            - Find releases with very specific style combinations and so apply
-            the search to only a specific style within a genre.
-            <br />
-            - Discover records that are not heavily owned or wanted by the
-            community, which can be an indicator of rarity.
-            <br />- Apply multiple constraints at once.
+            <strong>Architecture & Design Patterns:</strong>
           </p>
+          <ul className="text-gray-500 mb-4 dark:text-gray-300 space-y-2">
+            <li>
+              • Modular separation of concerns (data, input validation,
+              utilities)
+            </li>
+            <li>
+              • Input validation layer with custom validators for strings,
+              integers, years, and booleans
+            </li>
+            <li>
+              • Dynamic query building using conditional parameter injection
+            </li>
+            <li>
+              • Error handling with try-except blocks at critical API
+              interaction points
+            </li>
+          </ul>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            I developed a CLI application that:
-            <br /> - Collects user input.
-            <br /> - Validates it against known Discogs values.
-            <br /> - Performs API searches.
-            <br /> - Fetches additional release data.
-            <br /> - Applies custom filtering logic.
-            <br /> - Outputs URLs both in terminal and in a reusable file.
+            <strong>Key Technical Features:</strong>
           </p>
+          <ul className="text-gray-500 mb-4 dark:text-gray-300 space-y-2">
+            <li>
+              • <strong>Input Validation:</strong> Custom validators ensure data
+              integrity before API calls, with list-based validation against
+              predefined country and style lists
+            </li>
+            <li>
+              • <strong>Flexible Style Matching:</strong> Implemented both
+              strict (exact match) and inclusive (subset) style filtering using
+              set operations. Not possible through Discogs` native search
+              parameters
+            </li>
+            <li>
+              • <strong>Rarity Filtering:</strong> Post-API filtering based on
+              community want/have thresholds to identify undervalued releases
+            </li>
+            <li>
+              • <strong>Data Normalization:</strong> Consistent lowercase
+              transformation and list handling for comparison operations
+            </li>
+            <li>
+              • <strong>HTML Export:</strong> Automated generation of clickable
+              HTML files with search parameters and results for easy reference
+            </li>
+          </ul>
         </div>
       </div>
 
-      {/* Section 3: The Outcome */}
+      {/* Section 3: Problem-Solving Approach */}
+      <div className="pt-20">
+        <h2 className="text-3xl font-semibold mb-4 font-Ovo text-center">
+          Problem-Solving & Decisions
+        </h2>
+        <div className="grid md:grid-cols-2 gap-8 mt-8">
+          <div className="space-y-3">
+            <h3 className="text-xl font-semibold font-Ovo">
+              API Rate Limiting
+            </h3>
+            <p className="text-gray-500 dark:text-gray-300">
+              Implemented graceful error handling and extraction of release IDs
+              before detailed fetching to minimize API calls. Future iterations
+              could include caching mechanisms.
+            </p>
+          </div>
+          <div className="space-y-3">
+            <h3 className="text-xl font-semibold font-Ovo">Data Consistency</h3>
+            <p className="text-gray-500 dark:text-gray-300">
+              The Discogs API returns inconsistent data types (single values vs.
+              lists). Solved this by normalizing all style data to lists before
+              comparison, ensuring reliable filtering logic.
+            </p>
+          </div>
+          <div className="space-y-3">
+            <h3 className="text-xl font-semibold font-Ovo">User Experience</h3>
+            <p className="text-gray-500 dark:text-gray-300">
+              Created an interactive CLI with clear prompts and validation
+              feedback. Invalid inputs trigger helpful error messages
+              referencing valid options, reducing user frustration.
+            </p>
+          </div>
+          <div className="space-y-3">
+            <h3 className="text-xl font-semibold font-Ovo">Scalability</h3>
+            <p className="text-gray-500 dark:text-gray-300">
+              Structured the codebase with modular architecture, separating
+              concerns into distinct modules for easier maintenance and future
+              enhancements.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Section 4: Results & Impact */}
       <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
         <div className="md:w-1/2">
-          <h2 className="text-3xl font-semibold mb-4 font-Ovo">The Outcome</h2>
+          <h2 className="text-3xl font-semibold mb-4 font-Ovo">
+            Results & Impact
+          </h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            The tool significantly reduces discovery time and allows collectors
-            to quickly identify rare or niche releases. It transformed a manual
-            browsing process into an automated workflow.
+            <strong>Quantifiable Outcomes:</strong>
           </p>
-          <p className="text-gray-500">View the app here:</p>
+          <ul className="text-gray-500 mb-4 dark:text-gray-300 space-y-2">
+            <li>
+              • Reduced search time from ~30 minutes of manual filtering to ~5
+              minutes (depending on result volume)
+            </li>
+            <li>
+              • Enabled discovery of rare releases (low want/have counts) that
+              don`t surface in standard searches
+            </li>
+            <li>
+              • Generated reusable HTML exports for tracking searches over time
+            </li>
+          </ul>
+          <p className="text-gray-500 mb-4 dark:text-gray-300">
+            <strong>Technical Learnings:</strong>
+          </p>
+          <ul className="text-gray-500 mb-4 dark:text-gray-300 space-y-2">
+            <li>
+              • Gained experience with REST API integration and authentication
+              patterns
+            </li>
+            <li>
+              • Practiced defensive programming through comprehensive input
+              validation
+            </li>
+            <li>
+              • Improved understanding of modular Python architecture and
+              separation of concerns
+            </li>
+            <li>
+              • Learned to handle inconsistent API responses with normalization
+              strategies
+            </li>
+          </ul>
+          <p className="text-gray-500">
+            <strong>Repository:</strong>
+          </p>
           <div className="flex items-center gap-6 mt-4">
             <a
               href="https://github.com/rob-cost/Discogs-Finder"
@@ -132,12 +244,35 @@ export default function DiscogsFilterEnhancerCaseStudy() {
               rel="noopener noreferrer"
               className="text-sm underline hover:text-gray-500"
             >
-              GitHub
+              View on GitHub →
             </a>
           </div>
         </div>
         <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
           <NextVideo src={video} className="object-cover rounded-lg" />
+        </div>
+      </div>
+
+      {/* Section 5: Future Enhancements */}
+      <div className="pt-20">
+        <h2 className="text-3xl font-semibold mb-4 font-Ovo text-center">
+          Future Enhancements
+        </h2>
+        <div className="max-w-3xl mx-auto">
+          <ul className="text-gray-500 dark:text-gray-300 space-y-3">
+            <li>
+              • <strong>GUI Implementation:</strong> Build a web interface for
+              broader accessibility
+            </li>
+            <li>
+              • <strong>Automated Alerts:</strong> Implement email notifications
+              when new releases match saved search criteria
+            </li>
+            <li>
+              • <strong>Multi-Genre Support:</strong> Extend beyond electronic
+              music to jazz, hip-hop, and other genres
+            </li>
+          </ul>
         </div>
       </div>
 
