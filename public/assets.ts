@@ -114,9 +114,9 @@ export const projects: Project[] = [
 
   {
     title: "AI Learning Platform",
-    image: "/works-img/ailearningplatform.png",
+    image: "/works-img/ailmspro/ailmspro-banner.png",
     description:
-      "An intelligent, adaptive learning platform that generates personalized educational content using Large Language Models (LLMs)",
+      "An educational platform that leverages AI to generate personalized learning paths and adaptive content.",
     techStack: ["Django", "Python", "Groq", "PostgreSQL", "Pydantic"],
     githubUrl: "https://github.com/rob-cost/Learning-Platform",
     liveDemoUrl: "https://ailmspro.roberto-costantino.com/",
@@ -124,7 +124,7 @@ export const projects: Project[] = [
   },
   {
     title: "Discogs Filter Enhancer",
-    image: "/works-img/discogsFilter/discogsFilter.png",
+    image: "/works-img/discogsFilter/discogsFilterLogo.png",
     description:
       "A modular CLI application that extends Discogs' API with additional filtering logic not available in the platform, including single-style matching, rarity filtering, and automated result exporting.",
     techStack: ["Python", "Discogs API"],
