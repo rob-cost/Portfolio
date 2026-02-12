@@ -71,10 +71,11 @@ export default function DiscogsFilterEnhancerCaseStudy() {
 
         <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
           <Image
-            src="/works-img/discogsFilter/discogsFilterBlack.png"
+            src="/works-img/discogsFilter/discogsFilterLogo.png"
             alt="Discogs Filter Enhancer Overview"
             className="object-cover object-center rounded-lg"
-            fill
+            width={800}
+            height={600}
           />
         </div>
       </div>
@@ -156,12 +157,13 @@ export default function DiscogsFilterEnhancerCaseStudy() {
         <div className="grid md:grid-cols-2 gap-8 mt-8">
           <div className="space-y-3">
             <h3 className="text-xl font-semibold font-Ovo">
-              API Rate Limiting
+              Error Handling & API Efficiency
             </h3>
             <p className="text-gray-500 dark:text-gray-300">
-              Implemented graceful error handling and extraction of release IDs
-              before detailed fetching to minimize API calls. Future iterations
-              could include caching mechanisms.
+              Implemented comprehensive error handling at all API interaction
+              points to gracefully manage failures during release fetching.
+              Optimized API usage by extracting release IDs first, then fetching
+              detailed metadata only for filtered results.
             </p>
           </div>
           <div className="space-y-3">
