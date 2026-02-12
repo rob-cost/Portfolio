@@ -236,18 +236,20 @@ export default function DiscogsFilterEnhancerCaseStudy() {
               strategies
             </li>
           </ul>
-          <p className="text-gray-500">
-            <strong>Repository:</strong>
-          </p>
-          <div className="flex items-center gap-6 mt-4">
-            <a
-              href="https://github.com/rob-cost/Discogs-Finder"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm underline hover:text-gray-500"
-            >
-              View on GitHub →
-            </a>
+          <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+            <p className="text-gray-500 mb-2 dark:text-gray-300">
+              <strong>View the project:</strong>
+            </p>
+            <div className="flex items-center gap-6 mt-4">
+              <a
+                href="https://github.com/rob-cost/Discogs-Finder"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-2 bg-black dark:bg-white text-white dark:text-black rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition"
+              >
+                GitHub Repository
+              </a>
+            </div>
           </div>
         </div>
         <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
@@ -256,7 +258,7 @@ export default function DiscogsFilterEnhancerCaseStudy() {
       </div>
 
       {/* Section 5: Future Enhancements */}
-      <div className="pt-20">
+      <div className="pt-20 text-center">
         <h2 className="text-3xl font-semibold mb-4 font-Ovo text-center">
           Future Enhancements
         </h2>

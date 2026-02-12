@@ -36,7 +36,7 @@ function Works() {
         className="text-center max-w-2xl leading-6 mx-auto mt-5 mb-12 font-Ovo"
       >
         I’m always working on new projects and experimenting with ideas. Here
-        are some of my latest works — you can find more on my{" "}
+        are some of my latest works, you can find more on my{" "}
         <a href="https://github.com/rob-cost" target="_blank">
           GitHub
         </a>{" "}
@@ -58,14 +58,25 @@ function Works() {
           >
             {/* Clickable Image */}
             <Link href={`/case-studies/${project.slug}`}>
-              <div className="relative h-[200px] sm:h-[300px] md:h-[350px] w-full cursor-pointer overflow-hidden rounded-md">
+              <div className="relative h-[200px] sm:h-[300px] md:h-[350px] w-full cursor-pointer overflow-hidden rounded-md group">
+                {/* Image */}
                 <Image
                   src={project.image}
                   alt={project.title}
                   height={400}
                   width={800}
-                  className="object-cover w-full h-full transform transition duration-300 hover:scale-105"
+                  className="object-cover w-full h-full transform transition duration-300 group-hover:scale-105"
                 />
+
+                {/* Dark overlay */}
+                <div className="absolute inset-0 backdrop-blur-sm bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300" />
+
+                {/* Text */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                  <span className="text-white font-semibold text-xl tracking-wide">
+                    View Case Study
+                  </span>
+                </div>
               </div>
             </Link>
 
