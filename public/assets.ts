@@ -134,7 +134,7 @@ export const projects: Project[] = [
   },
   {
     title: "MealMind",
-    image: "/meal-mind_outcome.png",
+    image: "/works-img/mealMind/mealMind-banner.png",
     description:
       "A recipes collection platform to search, add, and explore new recipes from around the world",
     techStack: [
