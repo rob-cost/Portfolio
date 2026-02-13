@@ -28,7 +28,7 @@ export default function DiscogsFilterEnhancerCaseStudy() {
 
       {/* Section 0: Specs */}
       <div>
-        <div className="text-center">
+        <div className="text-center space-y-2">
           <p>
             <strong>Role:</strong> Developer
           </p>
@@ -69,11 +69,11 @@ export default function DiscogsFilterEnhancerCaseStudy() {
           </p>
         </div>
 
-        <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
+        <div className="md:w-1/2 relative w-full h-auto rounded-lg overflow-hidden">
           <Image
             src="/works-img/discogsFilter/discogsFilterLogo.png"
             alt="Discogs Filter Enhancer Overview"
-            className="object-cover object-center rounded-lg"
+            className="object-contain rounded-lg"
             width={800}
             height={600}
           />
@@ -81,18 +81,7 @@ export default function DiscogsFilterEnhancerCaseStudy() {
       </div>
 
       {/* Section 2: Technical Implementation */}
-      <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
-        {/* Image */}
-        <div className="relative flex-1 rounded-lg overflow-hidden">
-          <Image
-            src={"/works-img/discogsFilter/discogsFilter-filterList.png"}
-            alt="discogs-filter-enhancer_filterList"
-            className="object-contain rounded-lg"
-            width={800}
-            height={600}
-          />
-        </div>
-
+      <div className="flex flex-col md:flex-row-reverse md:items-center pt-20 gap-8">
         {/* Text */}
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">
@@ -147,6 +136,16 @@ export default function DiscogsFilterEnhancerCaseStudy() {
             </li>
           </ul>
         </div>
+        {/* Image */}
+        <div className="relative flex-1 w-full h-auto rounded-lg overflow-hidden">
+          <Image
+            src={"/works-img/discogsFilter/discogsFilter-filterList.png"}
+            alt="discogs-filter-enhancer_filterList"
+            className="object-contain rounded-lg"
+            width={1000}
+            height={800}
+          />
+        </div>
       </div>
 
       {/* Section 3: Problem-Solving Approach */}
@@ -200,7 +199,7 @@ export default function DiscogsFilterEnhancerCaseStudy() {
             Results & Impact
           </h2>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            <strong>Quantifiable Outcomes:</strong>
+            <strong>Outcomes:</strong>
           </p>
           <ul className="text-gray-500 mb-4 dark:text-gray-300 space-y-2">
             <li>
@@ -208,8 +207,8 @@ export default function DiscogsFilterEnhancerCaseStudy() {
               minutes (depending on result volume)
             </li>
             <li>
-              • Enabled discovery of rare releases (low want/have counts) that
-              don`t surface in standard searches
+              • Enabled discovery of undervalued releases (low want/have counts)
+              that don`t surface in standard searches
             </li>
             <li>
               • Generated reusable HTML exports for tracking searches over time
@@ -252,8 +251,8 @@ export default function DiscogsFilterEnhancerCaseStudy() {
             </div>
           </div>
         </div>
-        <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
-          <NextVideo src={video} className="object-cover rounded-lg" />
+        <div className="md:w-1/2 relative w-full h-auto rounded-lg overflow-hidden">
+          <NextVideo src={video} className="object-contain rounded-lg" />
         </div>
       </div>
 

@@ -114,7 +114,7 @@ export const projects: Project[] = [
 
   {
     title: "AI Learning Platform",
-    image: "/works-img/ailmspro/ailmspro-banner.png",
+    image: "/works-img/ailmspro/ailmspro-ban.png",
     description:
       "An educational platform that leverages AI to generate personalized learning paths and adaptive content.",
     techStack: ["Django", "Python", "Groq", "PostgreSQL", "Pydantic"],

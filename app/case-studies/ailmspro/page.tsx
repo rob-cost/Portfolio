@@ -24,7 +24,7 @@ export default function AilmsProCaseStudy() {
 
       {/* Section 0: Specs */}
       <div>
-        <div className="text-center">
+        <div className="text-center space-y-2">
           <p>
             <strong>Role:</strong> Full-Stack Developer
           </p>
@@ -60,44 +60,24 @@ export default function AilmsProCaseStudy() {
           <ul className="list-disc ml-5 text-gray-500 space-y-2 dark:text-gray-300">
             <li>Adaptive difficulty assessment using AI-generated quizzes</li>
             <li>Dynamic generation of 30 topics and 120 lessons per subject</li>
-            <li>Real-time progress tracking and completion analytics</li>
+            <li>Real-time progress tracking</li>
             <li>Responsive UI with background task processing</li>
             <li>Secure user authentication and profile management</li>
           </ul>
         </div>
-        <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden shadow-lg">
+        <div className="w-full h-auto md:w-1/2 relative rounded-lg overflow-hidden shadow-lg">
           <Image
             src="/works-img/ailmspro/ailmspro_1.png"
             alt="AI Learning Platform Dashboard"
-            height={400}
+            height={800}
             width={800}
-            className="object-cover object-center rounded-lg"
+            className="object-contain rounded-lg"
           />
         </div>
       </div>
 
       {/* Technical Implementation */}
-      <div className="flex flex-col md:flex-row pt-20 gap-8">
-        <div className="md:w-1/2 flex flex-col gap-4">
-          {[
-            "/works-img/ailmspro/ailmspro_3.png",
-            "/works-img/ailmspro/ailmspro_4.png",
-          ].map((src, i) => (
-            <div
-              key={i}
-              className="relative flex-1 h-60 rounded-lg overflow-hidden shadow-lg"
-            >
-              <Image
-                src={src}
-                alt={`Platform Feature ${i + 1}`}
-                height={400}
-                width={800}
-                className="object-cover rounded-lg"
-              />
-            </div>
-          ))}
-        </div>
-
+      <div className="flex flex-col md:flex-row-reverse md:items-center pt-20 gap-8">
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">
             Technical Implementation
@@ -129,11 +109,11 @@ export default function AilmsProCaseStudy() {
             Asynchronous Processing
           </h3>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            Deployed Celery with Redis as a message broker to handle
-            resource-intensive AI content generation asynchronously. This
-            architecture prevents blocking operations, enabling users to
-            navigate the platform while content generates in the background.
-            Implemented polling mechanisms for real-time status updates.
+            Implemented Celery with Redis as a message broker to handle AI
+            content generation asynchronously. This architecture prevents
+            blocking operations, enabling users to navigate the platform while
+            content generates in the background. Implemented polling mechanisms
+            for real-time status updates.
           </p>
 
           <h3 className="text-xl font-semibold mb-2 mt-6">
@@ -147,10 +127,29 @@ export default function AilmsProCaseStudy() {
             implemented CI/CD pipelines using GitHub Actions.
           </p>
         </div>
+        <div className="md:w-1/2 w-full h-auto flex flex-col gap-4">
+          {[
+            "/works-img/ailmspro/ailmspro_3.png",
+            "/works-img/ailmspro/ailmspro_4.png",
+          ].map((src, i) => (
+            <div
+              key={i}
+              className="relative flex-1 rounded-lg overflow-hidden shadow-lg"
+            >
+              <Image
+                src={src}
+                alt={`Platform Feature ${i + 1}`}
+                height={400}
+                width={800}
+                className="object-contain rounded-lg"
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Problem Solving & Challenges */}
-      <div className="flex flex-col md:flex-row pt-20 gap-8">
+      <div className="flex flex-col md:flex-row pt-20 gap-8 items-center">
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold mb-4 font-Ovo">
             Problem Solving & Challenges
@@ -196,33 +195,30 @@ export default function AilmsProCaseStudy() {
             communication, and external database integration.
           </p>
           <p className="text-gray-500 mb-4 dark:text-gray-300">
-            <strong>Solution:</strong> Used Neon.tech for managed PostgreSQL
-            hosting with built-in SSL connections. Created a Virtual Private
-            Cloud (VPC) on GCP and provisioned a Memorystore Redis instance for
-            secure inter-service communication. Deployed on a GCP Compute Engine
-            VM where I built Docker images for Django and Celery services,
-            configured docker-compose for container orchestration, and managed
-            environment variables for production. Implemented proper CSRF/CORS
-            configurations and secured the deployment with environment-based
-            settings.
+            <strong>Solution:</strong> Used Neon for managed PostgreSQL hosting
+            with built-in SSL connections. Created a Virtual Private Cloud (VPC)
+            on GCP for secure inter-service communication. Deployed on a GCP
+            Compute Engine VM where I built Docker images for Django, Celery and
+            Redis services, configured docker-compose for container
+            orchestration, and managed environment variables for production.
           </p>
         </div>
 
-        <div className="md:w-1/2 flex flex-col gap-4">
+        <div className="w-full h-auto md:w-1/2 flex flex-col gap-4">
           {[
-            "/works-img/ailmspro/ailmspro_2.png",
-            "/works-img/ailmspro/ailmspro-code.png",
+            "/works-img/ailmspro/ailmspro-aiPrompt.png",
+            "/works-img/ailmspro/ailmspro-pollingFunct.png",
           ].map((src, i) => (
             <div
               key={i}
-              className="relative flex-1 h-60 rounded-lg overflow-hidden shadow-lg"
+              className="relative flex-1 rounded-lg overflow-hidden shadow-lg"
             >
               <Image
                 src={src}
                 alt={`Platform Feature ${i + 1}`}
-                height={400}
-                width={800}
-                className="object-cover rounded-lg"
+                height={800}
+                width={1000}
+                className="object-contain rounded-lg"
               />
             </div>
           ))}
@@ -231,12 +227,13 @@ export default function AilmsProCaseStudy() {
 
       {/* Results & Impact */}
       <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
-        <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden shadow-lg">
+        <div className="md:w-1/2 relative w-full h-auto rounded-lg overflow-hidden shadow-lg">
           <Image
             src="/works-img/ailmspro/ailmspro_7.png"
             alt="Platform Results"
-            fill
-            className="object-cover rounded-lg"
+            width={800}
+            height={600}
+            className="object-contain rounded-lg"
           />
         </div>
 
@@ -306,64 +303,28 @@ export default function AilmsProCaseStudy() {
             </li>
             <li>
               <strong>Interactive Learning:</strong> Implement end-of-lesson
-              quizzes with immediate feedback and adaptive difficulty
+              quizzes with immediate feedback
             </li>
             <li>
               <strong>AI Chat Assistant:</strong> Integrate real-time AI
               tutoring for concept clarification and personalized help
             </li>
-            <li>
-              <strong>Social Features:</strong> Add discussion forums, peer
-              learning groups, and achievement badges for gamification
-            </li>
           </ul>
         </div>
 
-        <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden shadow-lg">
+        <div className="md:w-1/2 relative w-full h-auto rounded-lg overflow-hidden shadow-lg">
           <Image
-            src="/works-img/ailmspro/ailmspro-banner.png"
+            src="/works-img/ailmspro/ailmspro_2.png"
             alt="Future Development Roadmap"
-            fill
-            className="object-cover rounded-lg"
+            width={800}
+            height={600}
+            className="object-contain rounded-lg"
           />
         </div>
       </div>
 
-      {/* Key Takeaways */}
-      <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8 mt-20">
-        <h2 className="text-3xl font-semibold mb-6 font-Ovo text-center">
-          Key Takeaways
-        </h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-3">System Design</h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              Learned to architect scalable full-stack applications with
-              separation of concerns, asynchronous processing, and cloud
-              deployment practices.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-3">AI Integration</h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              Developed expertise in working with LLMs, including prompt
-              engineering, output validation, and handling responses in
-              production.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-3">Problem Solving</h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              Enhanced ability to identify performance bottlenecks, implement
-              optimization strategies, and balance technical constraints with
-              user experience.
-            </p>
-          </div>
-        </div>
-      </div>
-
       {/* Back to Works Button */}
-      <div className="text-center mt-16">
+      <div className="text-center mt-20">
         <Link
           href="/#works"
           className="inline-block px-8 py-3 bg-black text-white rounded-full font-Ovo hover:bg-gray-800 transition"

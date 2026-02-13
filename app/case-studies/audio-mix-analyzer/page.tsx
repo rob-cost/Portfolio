@@ -53,60 +53,68 @@ export default function AudioMixAnalyserCaseStudy() {
       </div>
 
       {/* Section 1: The Problem */}
-      <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
-        <div className="md:w-1/2">
-          <h2 className="text-3xl font-semibold mb-4 font-Ovo">The Problem</h2>
-          <p className="text-gray-500 mb-4 dark:text-gray-300">
-            My client, a professional audio engineer, needed a tool to speed up
-            their mixing analysis workflow. While commercial solutions exist,
-            they either provide too much raw data without interpretation, or
-            generate generic feedback that doesn`t align with professional
-            mixing standards.
-          </p>
-          <p className="text-gray-500 mb-4 dark:text-gray-300">
-            The client wanted a custom solution that could:
-          </p>
-          <ul className="list-disc ml-5 text-gray-500 mb-4 dark:text-gray-300 space-y-1">
-            <li>Quickly analyze uploaded audio files (up to 120MB)</li>
-            <li>
-              Extract professional-grade metrics (LUFS, stereo width, spectral
-              balance)
-            </li>
-            <li>Generate feedback with specific technical recommendations</li>
-            <li>Compare tracks against reference mixes</li>
-            <li>Process results fast (under 30 seconds for typical tracks)</li>
-          </ul>
-          <p className="text-gray-500 mb-4 dark:text-gray-300">
-            The goal was to create an internal tool that would serve as a
-            first-pass analysis assistant, helping identify mix issues faster
-            than manual evaluation.
-          </p>
-        </div>
+      <div className="pt-20">
+        <h2 className="text-3xl font-semibold mb-12 font-Ovo text-center">
+          The Problem
+        </h2>
+        <div className="flex flex-col md:flex-row md:items-center pt-10 gap-8">
+          <div className="md:w-1/2">
+            <p className="text-gray-500 mb-4 dark:text-gray-300">
+              My client, a professional audio engineer, needed a tool to speed
+              up their mixing analysis workflow. While commercial solutions
+              exist, they either provide too much raw data without
+              interpretation, or generate generic feedback that doesn`t align
+              with professional mixing standards.
+            </p>
+            <p className="text-gray-500 mb-4 dark:text-gray-300">
+              The client wanted a custom solution that could:
+            </p>
+            <ul className="list-disc ml-5 text-gray-500 mb-4 dark:text-gray-300 space-y-1">
+              <li>Quickly analyze uploaded audio files (up to 120MB)</li>
+              <li>
+                Extract professional-grade metrics (LUFS, stereo width, spectral
+                balance)
+              </li>
+              <li>Generate feedback with specific technical recommendations</li>
+              <li>Compare tracks against reference mixes</li>
+              <li>
+                Process results fast (under 30 seconds for typical tracks)
+              </li>
+            </ul>
+            <p className="text-gray-500 mb-4 dark:text-gray-300">
+              The goal was to create an internal tool that would serve as a
+              first-pass analysis assistant, helping identify mix issues faster
+              than manual evaluation.
+            </p>
+          </div>
 
-        <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
-          <Image
-            src="/works-img/mixScope/mixScope.png"
-            alt="MixScope Interface"
-            className="object-cover object-center rounded-lg"
-            fill
-          />
+          <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
+            <Image
+              src="/works-img/mixScope/mixScope.png"
+              alt="MixScope Interface"
+              className="object-cover object-center rounded-lg"
+              fill
+            />
+          </div>
         </div>
       </div>
 
       {/* Section 2: The Solution */}
       <div className="pt-20">
-        <h2 className="text-3xl font-semibold mb-8 font-Ovo text-center">
-          The Solution
-        </h2>
+        <div className="mb-12">
+          <h2 className="text-3xl font-semibold mb-8 font-Ovo text-center">
+            The Solution
+          </h2>
 
-        <p className="text-gray-500 mb-12 dark:text-gray-300 text-center max-w-3xl mx-auto">
-          I built MixScope as a full-stack web application with a Python backend
-          for audio processing and a React frontend for visualization and
-          interaction.
-        </p>
+          <p className="text-gray-500 dark:text-gray-300 text-center max-w-3xl mx-auto">
+            I built MixScope as a full-stack web application with a Python
+            backend for audio processing and a React frontend for visualization
+            and interaction.
+          </p>
+        </div>
 
         {/* Audio Processing Pipeline */}
-        <div className="flex flex-col md:flex-row md:items-center gap-8 mb-12">
+        <div className="flex flex-col md:flex-row md:items-center pt-10 mb-12 gap-8">
           <div className="md:w-1/2">
             <h3 className="text-xl font-semibold mb-3">
               Audio Processing Pipeline
@@ -140,7 +148,7 @@ export default function AudioMixAnalyserCaseStudy() {
               </li>
             </ul>
           </div>
-          <div className="md:w-1/2 relative rounded-lg overflow-hidden mt-12">
+          <div className="md:w-1/2 relative rounded-lg overflow-hidden">
             <Image
               src="/works-img/mixScope/mixScope-analysis.png"
               alt="Audio Analysis Pipeline"
@@ -226,7 +234,7 @@ export default function AudioMixAnalyserCaseStudy() {
               scaling and smooth interpolation.
             </p>
           </div>
-          <div className="md:w-1/2 relative rounded-lg overflow-hidden mt-12">
+          <div className="md:w-1/2 relative rounded-lg overflow-hidden">
             <Image
               src="/works-img/mixScope/mixScope-upload.png"
               alt="MixScope Frontend Interface"
@@ -245,7 +253,7 @@ export default function AudioMixAnalyserCaseStudy() {
         </h2>
 
         {/* Performance Optimization */}
-        <div className="flex flex-col md:flex-row md:items-center gap-8 mb-12">
+        <div className="flex flex-col md:flex-row md:items-center gap-8 mb-12 pt-10">
           <div className="md:w-1/2">
             <h3 className="text-xl font-semibold mb-3">
               Performance Optimization
@@ -283,8 +291,8 @@ export default function AudioMixAnalyserCaseStudy() {
               src={"/works-img/mixScope/mixScope-analysisTempo.png"}
               alt="MixScope Technical Architecture"
               className="w-full h-auto object-contain rounded-lg"
-              width={900}
-              height={600}
+              width={1400}
+              height={1400}
             />
           </div>
         </div>
@@ -344,10 +352,10 @@ export default function AudioMixAnalyserCaseStudy() {
 
       {/* Section 4: Results & Impact */}
       <div className="pt-20">
-        <h2 className="text-3xl font-semibold mb-4 font-Ovo text-center">
+        <h2 className="text-3xl font-semibold mb-12 font-Ovo text-center">
           Results & Impact
         </h2>
-        <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
+        <div className="flex flex-col md:flex-row md:items-center pt-10 gap-8">
           <div className="md:w-1/2">
             <h3 className="text-xl font-semibold mb-3">Final Result</h3>
             <p className="text-gray-500 mb-4 dark:text-gray-300">
@@ -385,10 +393,10 @@ export default function AudioMixAnalyserCaseStudy() {
 
       {/* Section 5: Lessons Learned */}
       <div className="pt-20">
-        <h2 className="text-3xl font-semibold mb-4 font-Ovo text-center">
+        <h2 className="text-3xl font-semibold mb-12 font-Ovo text-center">
           Lessons Learned
         </h2>
-        <div className="flex flex-col md:flex-row md:items-center pt-20 gap-8">
+        <div className="flex flex-col md:flex-row md:items-center pt-10 gap-8">
           <div className="md:w-1/2">
             <p className="text-gray-500 mb-4 dark:text-gray-300">
               <strong>Client collaboration is essential.</strong> Working
@@ -419,12 +427,13 @@ export default function AudioMixAnalyserCaseStudy() {
             </p>
           </div>
 
-          <div className="md:w-1/2 relative h-72 md:h-96 rounded-lg overflow-hidden">
+          <div className="md:w-1/2 relative rounded-lg overflow-hidden">
             <Image
               src="/works-img/mixScope/mixScope-futureSteps.png"
               alt="MixScope Development Process"
-              className="object-cover object-center rounded-lg mx-auto"
-              fill
+              className="object-contain rounded-lg mx-auto"
+              height={600}
+              width={800}
             />
           </div>
         </div>
@@ -433,8 +442,8 @@ export default function AudioMixAnalyserCaseStudy() {
       {/* Section 6: Future Enhancements */}
       <div className="pt-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-semibold mb-4 font-Ovo">
-            Potential Future Enhancements{" "}
+          <h2 className="text-3xl font-semibold mb-8 font-Ovo">
+            Potential Future Enhancements
           </h2>
           <p className="text-gray-500 dark:text-gray-300">
             While MixScope currently meets the client`s workflow needs,
@@ -442,20 +451,20 @@ export default function AudioMixAnalyserCaseStudy() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 mt-6">
+        <div className="grid md:grid-cols-2 gap-6 pt-10 mb-8">
           <div>
             <h3 className="text-xl font-semibold mb-2">Fine-Tuned LLM</h3>
             <p className="text-gray-500 dark:text-gray-300">
-              Training a custom model on professionally mixed tracks could
-              provide even more accurate genre-specific feedback and better
-              understand the nuances of different mixing styles.
+              Training a custom model on a set of professionally mixed tracks
+              could provide even more accurate genre-specific feedback and
+              better understand the nuances of different mixing styles.
             </p>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-2">Genre Profiles</h3>
             <p className="text-gray-500 dark:text-gray-300">
-              Implementing preset analysis profiles for different genres
-              (electronic, rock, classical) could adjust evaluation criteria and
+              Implementing preset profiles for different genres (electronic,
+              rock, classical) could adjust evaluation criteria and
               recommendations based on style-specific standards.
             </p>
           </div>
@@ -472,8 +481,8 @@ export default function AudioMixAnalyserCaseStudy() {
               Enhanced Visualizations
             </h3>
             <p className="text-gray-500 dark:text-gray-300">
-              Expanding beyond frequency spectrum charts to include stereo field
-              plots, loudness evolution graphs, and dynamic range meters could
+              Implementing graphs and visualizations for key metrics like
+              frequency spectrum, stereo field, and loudness evolution would
               improve data comprehension.
             </p>
           </div>
