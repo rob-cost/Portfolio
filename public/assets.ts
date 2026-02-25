@@ -122,33 +122,33 @@ export const projects: Project[] = [
     liveDemoUrl: "https://ailmspro.roberto-costantino.com/",
     slug: "ailmspro",
   },
-  {
-    title: "Discogs Filter Enhancer",
-    image: "/works-img/discogsFilter/discogsFilterLogo.png",
-    description:
-      "A modular CLI application that extends Discogs' API with additional filtering logic not available in the platform, including single-style matching, rarity filtering, and automated result exporting.",
-    techStack: ["Python", "Discogs API"],
-    githubUrl: "",
-    liveDemoUrl: "",
-    slug: "discogs-filter-enhancer",
-  },
-  {
-    title: "MealMind",
-    image: "/works-img/mealMind/mealMind-banner.png",
-    description:
-      "A recipes collection platform to search, add, and explore new recipes from around the world",
-    techStack: [
-      "Django",
-      "Python",
-      "SQLite",
-      "Pandas",
-      "Matplotlib",
-      "Paginator",
-    ],
-    githubUrl: "https://github.com/rob-cost/recipe-app",
-    liveDemoUrl: "https://recipes-discover-app-7480a557fb61.herokuapp.com/",
-    slug: "meal-mind",
-  },
+  // {
+  //   title: "Discogs Filter Enhancer",
+  //   image: "/works-img/discogsFilter/discogsFilterLogo.png",
+  //   description:
+  //     "A modular CLI application that extends Discogs' API with additional filtering logic not available in the platform, including single-style matching, rarity filtering, and automated result exporting.",
+  //   techStack: ["Python", "Discogs API"],
+  //   githubUrl: "",
+  //   liveDemoUrl: "",
+  //   slug: "discogs-filter-enhancer",
+  // },
+  // {
+  //   title: "MealMind",
+  //   image: "/works-img/mealMind/mealMind-banner.png",
+  //   description:
+  //     "A recipes collection platform to search, add, and explore new recipes from around the world",
+  //   techStack: [
+  //     "Django",
+  //     "Python",
+  //     "SQLite",
+  //     "Pandas",
+  //     "Matplotlib",
+  //     "Paginator",
+  //   ],
+  //   githubUrl: "https://github.com/rob-cost/recipe-app",
+  //   liveDemoUrl: "https://recipes-discover-app-7480a557fb61.herokuapp.com/",
+  //   slug: "meal-mind",
+  // },
   // {
   //   title: "RetroFlix",
   //   image: "/background-retroflix.png",

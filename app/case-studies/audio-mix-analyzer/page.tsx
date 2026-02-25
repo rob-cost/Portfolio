@@ -20,11 +20,9 @@ export default function AudioMixAnalyserCaseStudy() {
           MixScope | Audio Mix Analyzer
         </h1>
         <p className="text-gray-400 text-lg max-w-3xl mx-auto dark:text-gray-300">
-          A custom web application built for a professional audio engineer to
-          streamline their mixing workflow by providing instant, AI-powered
-          technical analysis of audio tracks. MixScope extracts key audio
-          metrics and translates them into actionable mixing feedback, with
-          optional reference track comparison.
+          A custom web application tool that help the client analyze their audio
+          mixes by extracting key audio metrics and translates them into
+          actionable mixing feedback.
         </p>
       </div>
 
@@ -32,22 +30,21 @@ export default function AudioMixAnalyserCaseStudy() {
       <div>
         <div className="text-center space-y-2">
           <p>
-            <strong>Role:</strong> Lead Developer (Solo Development)
+            <strong>Role:</strong> Lead Developer
           </p>
           <p>
-            <strong>Client:</strong> Professional Audio Engineer (Private
-            Commission)
+            <strong>Client:</strong> Private Client (Freelance)
           </p>
           <p>
             <strong>Duration:</strong> 2 months
           </p>
           <p>
-            <strong>Collaborators:</strong> Xochilt Cojal (UI/UX Design), Yuval
-            Muller (Audio Engineering Consultation)
+            <strong>Collaborators:</strong> Xochilt Cojal (UI/UX Design), Hany
+            Miller (Audio Engineer Consultant)
           </p>
           <p>
             <strong>Tech Stack:</strong> Python, FastAPI, Librosa, PyLoudnorm,
-            Pydub, NumPy, TypeScript, React, Groq API (GPT-OSS-120B), SlowAPI
+            Pydub, NumPy, TypeScript, React, Groq API, SlowAPI
           </p>
         </div>
       </div>
@@ -60,11 +57,10 @@ export default function AudioMixAnalyserCaseStudy() {
         <div className="flex flex-col md:flex-row md:items-center pt-10 gap-8">
           <div className="md:w-1/2">
             <p className="text-gray-500 mb-4 dark:text-gray-300">
-              My client, a professional audio engineer, needed a tool to speed
-              up their mixing analysis workflow. While commercial solutions
-              exist, they either provide too much raw data without
-              interpretation, or generate generic feedback that doesn`t align
-              with professional mixing standards.
+              The client needed a tool to speed up his mixing analysis workflow.
+              While commercial solutions exist, they either provide too much raw
+              data without interpretation, or generate generic feedback that
+              doesn`t align with professional mixing standards.
             </p>
             <p className="text-gray-500 mb-4 dark:text-gray-300">
               The client wanted a custom solution that could:
